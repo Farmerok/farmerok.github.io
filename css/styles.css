@@ -1,0 +1,256 @@
+html {
+    height: 100%;
+    background-image: linear-gradient(to bottom, #0e0e0b, #0e0e0b, #130e0e);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(31, 29, 28, 0.966);
+    box-shadow: 0 0 5px rgb(216, 8, 8);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Unbounded', cursive;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* добавлено свойство для переноса кнопок на новую строку */
+    margin-right: +40px;
+}
+
+/* Original styles for header navigation links */
+header nav a {
+    color: #ffaf01;
+    text-decoration: none;
+    font-size: 22px;
+    position: relative;
+}
+
+/* Hover styles */
+header nav a:hover {
+    color: #7c0b0b; /* Change the color of the link on hover */
+    /* You can add additional hover effects here if needed */
+}
+
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+    width: 100%;
+    padding: 0 20px;
+    text-align: left;
+}
+
+main h2 {
+    font-size: 26px;
+    margin-top: 0;
+    color: #bebeba;
+}
+
+main p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+    .red-text {color: #f00d0d; /* Red color */
+    }
+
+    .blue-text {color: #007bff; /* Blue color */
+    }
+
+    .green-text {color: #00a000; /* Green color */
+    }
+
+    .pink-text {color: #f00596; /* Pink color */
+    }
+
+    .orange-text {color: #ff7f00; /* Orange color */
+    }
+
+    .purple-text {color: #800080; /* Purple color */
+    }
+
+    .teal-text {color: #008080; /* Teal color */
+    }
+
+    .yellow-text {color: #ffff00; /* Yellow color */
+    }
+
+    .brown-text {color: #8b4513; /* Brown color */
+    }
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #444;
+}
+/* ONLY TAB PROJECT */
+.project-table-container {
+    max-height: 300px; /* Adjust the height as needed */
+    overflow-y: auto;
+    background-color: #313105; /* Set your desired background color */
+    padding: 10px; /* Add padding to the container if desired */
+}
+
+/* PRIMARY INSIDERKEEPS */
+.cti {
+background-color: #800808;
+padding: 17px 30px;
+border: 3px solid transparent;
+border-radius: 0.6em;
+transition: 0.2s;
+}
+
+.cti:hover {
+background-color: transparent;
+border: 3px solid #bd1919;
+box-shadow: 0px 0px 27px 5px #bd1919;
+}
+
+.CTI {
+color: #fff;
+font-family: 'Courier New', Courier, monospace;
+font-size: 20px;
+font-weight: bold;
+overflow: hidden;
+border-right: 4px solid transparent;
+white-space: nowrap;
+margin: 1190 auto;
+}
+
+.cti:hover .CTI {
+border-right: 4px solid #bd1919;
+animation: letters 1.75s steps(22, end),
+    cursor .4s step-end infinite;
+}
+
+@keyframes letters {
+from {
+    width: 0;
+}
+
+to {
+    width: 100%;
+}
+}
+
+@keyframes cursor {
+from {
+    border-color: transparent
+}
+
+50% {
+    border-color: #bd1919
+}
+}
+/* test*/
+/* Button styles */
+.animbutt {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #252522;
+    border-radius: 30px;
+    border: 2px solid #da4d83fb;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover styles */
+.animbutt:hover {
+    background-color: #e9d4d7;
+    color: #7c0b0b;
+}
+
+/* Active styles (when the button is clicked) */
+.animbutt:active {
+    background-color: #7c0b0b;
+    color: #ffffff;
+}
+
+
+/* INSIDERKEEPS PRESENT */
+/* === removing default button style ===*/
+.button.prestndinside {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+  }
+  
+  /* button styling */
+  .button.prestndinside {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #9c1919fb;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .button.prestndinside:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 5px 23px var(--animation-color))
+  }
+
+/* BUTTONS DOWNLOAD PROJECT */
+/* Стили для кнопки */
+.download-button {
+    display: inline-block;
+    background-color: #680f0f;
+    color: white;
+    padding: 5px 10px;
+
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #c973048e;
+}
+  
