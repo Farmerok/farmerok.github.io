@@ -1,5 +1,5 @@
 # Привет
-Приветествую тебя в репозитории сайта - [farmerok.github.io](farmerok.github.io/)
+Приветствую тебя в репозитории сайта - [farmerok.github.io](farmerok.github.io/)
 
 # 📂 Структура репозитория
 
