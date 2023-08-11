@@ -1,4 +1,4 @@
-# Привет!
+# Приветествую тебя в репозитории сайта - [farmerok.github.io](farmerok.github.io/) (coming soon)
 
 # 📂 Структура репозитория
 
