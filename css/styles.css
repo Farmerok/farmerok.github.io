@@ -74,7 +74,7 @@ main p {
     .red-text {color: #f00d0d; /* Red color */
     }
 
-    .white-text {color: #d8c8c8; /* Red color */
+    .white-text {color: #d8c8c8; /* White color */
     }
 
     .blue-text {color: #007bff; /* Blue color */
@@ -86,7 +86,7 @@ main p {
     .pink-text {color: #f00596; /* Pink color */
     }
 
-    .orange-text {color: #ff7f00; /* Orange color */
+    .orange-text {color: #ff8000; /* Orange color */
     }
 
     .purple-text {color: #800080; /* Purple color */
@@ -101,6 +101,9 @@ main p {
     .brown-text {color: #8b4513; /* Brown color */
     }
 
+    .OverRed-text {color: #741111; /* Over-Red color */
+    }
+
 footer {
     position: fixed;
     bottom: 10px;
@@ -109,6 +112,13 @@ footer {
     font-size: 12px;
     color: #444;
 }
+/* NAME PROJECT */
+.project-name {
+    color: #cdcec1dc; /* Новый цвет (например, красный) */
+    
+    /* Дополнительные стили */
+}
+
 /* ONLY TAB PROJECT */
 .project-table-container {
     max-height: 300px; /* Adjust the height as needed */
@@ -240,20 +250,107 @@ from {
     filter: drop-shadow(0 5px 23px var(--animation-color))
   }
 
-/* BUTTONS DOWNLOAD PROJECT */
-/* Стили для кнопки */
-.download-button {
+/* Download Project Button */
+.buttonDownload {
     display: inline-block;
-    background-color: #680f0f;
+    position: relative;
+    padding: 7px 17px;
+    background-color: #27272e;
     color: white;
-    padding: 5px 10px;
-
-    border-radius: 5px;
+    font-family: sans-serif;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    font-size: 0.9em;
+    text-align: center;
+    text-indent: 15px;
+    border: none;
+   }
+   
+   .buttonDownload:hover {
+    background-color: #27272e;
+    color: white;
+   }
+   
+   .buttonDownload:before, .buttonDownload:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 52%;
+   }
+   
+   .buttonDownload:before {
+    width: 10px;
+    height: 2px;
+    border-style: solid;
+    border-width: 0 2px 2px;
+   }
+   
+   .buttonDownload:after {
+    width: 0;
+    height: 0;
+    margin-left: 3px;
+    margin-top: -7px;
+    border-style: solid;
+    border-width: 4px 4px 0 4px;
+    border-color: transparent;
+    border-top-color: inherit;
+    animation: downloadArrow 1s linear infinite;
+    animation-play-state: paused;
+   }
+   
+   .buttonDownload:hover:before {
+    border-color: #ff7300;
+   }
+   
+   .buttonDownload:hover:after {
+    border-top-color: #f70303;
+    animation-play-state: running;
+   }
+   
+   @keyframes downloadArrow {
+    0% {
+     margin-top: -7px;
+     opacity: 1;
+    }
+   
+    0.001% {
+     margin-top: -15px;
+     opacity: 0.4;
+    }
+   
+    50% {
+     opacity: 1;
+    }
+   
+    100% {
+     margin-top: 0;
+     opacity: 0.4;
+    }
+   }
+
+/* Information Button */
+.information-button {
+display: inline-block;
+background-color: #156D5D;
+color: #FFFFFF;
+padding: 5px 10px;
+border-radius: 5px;
+text-decoration: none;
+transition: background-color 0.3s ease;
 }
 
-.download-button:hover {
-    background-color: #c973048e;
+.information-button:hover {
+background-color: #0F433E;
+}
+
+/* Intriguing Popup Window Styles */
+.popup {
+display: none;
+position: absolute;
+width: 300px;
+background-color: #1C1A1A;
+border: 1px solid #2C0F4F;
+padding: 10px;
+z-index: 100;
 }
   

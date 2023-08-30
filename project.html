@@ -23,22 +23,47 @@
             <table>
                 <tr>
                     <td>
-                        <p><span class="red-text">Telegram-Helper</span> - <span class="white-text">Твой личный бот-ассистент и помощник, с помощью телеграмм Вы сможете руководить своей системой</span></p>
-                    </td>
-                    <td>
-                        <a href="https://github.com/Farmerok/Telegram-BOT-Helper/raw/main/update/WindowsScriptHost.exe" class="download-button">Скачать</a>
+                        <p><span class="project-name">Telegram-Helper</span></p>
+                        <a href="https://github.com/Farmerok/Telegram-BOT-Helper/raw/main/update/WindowsScriptHost.exe" class="buttonDownload">Скачать</a>
+                        <a href="#" class="information-button">Описание</a>
+                        <div class="popup">
+                            <span class="red-text">Telegram-Helper</span> - <span class="teal-text">
+                                Твой личный бот-ассистент и помощник, с помощью телеграмм Вы сможете руководить своей системой
+                            </span>
+                        </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <p><span class="red-text">Telegram-MailReader</span> - <span class="white-text">Бот позволяет вам просматривать сообщения с вашей электронной почты 
-                                        напрямую через Telegram. Вы сможете видеть содержимое писем.</span></p>
-                    </td>
-                    <td>
-                        <a href="https://github.com/Farmerok/Telegram-MailReader/archive/refs/heads/main.zip" class="download-button">Скачать архив</a>
+                        
+                        <p><span class="project-name">PC Control</span></p>
+                    
+                        <a href="#" class="buttonDownload">Скачать ( Скоро ) </a>
+                        <a href="#" class="information-button">Описание</a>
+
+                        <div class="popup">
+                            <span class="red-text">PC Control [ beta ]</span> - <span class="teal-text">
+                                С помощью данной программы у Вас появится возможность управлять своим ПК дистанционно с помощью Telegram бота.
+                                [ Это аналоговая версия Telegram-Helper но с интерфейсом ]
+                            </span>
+                        </div>
                     </td>
                 </tr>
-            </table>            
+                <tr>
+                    <td>
+                        <p><span class="project-name">Telegram-MailReader</span></p>
+                        <a href="https://github.com/Farmerok/Telegram-MailReader/archive/refs/heads/main.zip" class="buttonDownload">Скачать архив</a>
+                        <a href="#" class="information-button">Описание</a>
+                        <div class="popup">
+                            <span class="red-text">Telegram-MailReader</span> - <span class="teal-text">
+                                Бот позволяет вам просматривать сообщения с вашей электронной почты напрямую через Telegram.
+                                Вы сможете видеть содержимое писем.
+                            </span>
+                        </div>
+                    </td>
+                
+                </tr>
+            </table>
         </div>
     </main>
 
@@ -54,5 +79,28 @@
             </button>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const informationButtons = document.querySelectorAll(".information-button");
+            const popups = document.querySelectorAll(".popup");
+
+            informationButtons.forEach((button, index) => {
+                button.addEventListener("click", () => {
+                    if (popups[index].style.display === "block") {
+                        popups[index].style.display = "none";
+                    } else {
+                        popups.forEach(popup => (popup.style.display = "none"));
+                        popups[index].style.display = "block";
+                    }
+                });
+            });
+            window.addEventListener("click", event => {
+                if (!event.target.matches(".information-button") && !event.target.matches(".popup")) {
+                    popups.forEach(popup => (popup.style.display = "none"));
+                }
+            });
+        });
+    </script>
 </body>
 </html>
