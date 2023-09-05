@@ -336,9 +336,6 @@ from {
     background-color: #351c38; /* Задайте желаемый цвет фона */
     padding: 10px; /* Добавьте отступы к контейнеру по желанию */
 }
-
-
-
 .answer {
     display: none;
     margin-top: 10px;
