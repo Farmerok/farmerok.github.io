@@ -205,7 +205,6 @@ from {
     color: #ffffff;
 }
 
-
 /* INSIDERKEEPS PRESENT */
 /* === removing default button style ===*/
 .button.prestndinside {
@@ -328,6 +327,40 @@ from {
     }
    }
 
+/* ASK - ANSER*/
+/* ONLY TAB PROJECT */
+/* Контейнер для вопроса */
+.question-container {
+    max-height: 325px; /* Установите нужную высоту */
+    overflow-y: auto;
+    background-color: #351c38; /* Задайте желаемый цвет фона */
+    padding: 10px; /* Добавьте отступы к контейнеру по желанию */
+}
+
+
+
+.answer {
+    display: none;
+    margin-top: 10px;
+}
+.question {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #219b546b;
+    border-radius: 5px;
+}
+.question h3 {
+    margin-top: 0;
+}
+.expand-button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
 /* Information Button */
 .information-button {
 display: inline-block;

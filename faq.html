@@ -5,13 +5,12 @@
     <title>IK - FAQ</title>
     <link type="image/png" sizes="50x50" rel="icon" href="icons/faq.png">
     <link rel="stylesheet" href="css/styles.css">
-
 </head>
 <body>
     <header>
         <button class="cti">
-            <div class="CTI"> FAQ </div>
-          </button>
+            <div class="CTI">InsiderKeeps Dev</div>
+        </button>
         <nav>
             <a class="animbutt" href="https://farmerok.github.io">Главная</a>
             <a class="animbutt" href="project">Проекты</a>
@@ -21,20 +20,79 @@
     <main>
         <h2>Приветствую в разделе FAQ!</h2>
         <p class="purple-text">Тут можете найти ответы на часто задаваемые вопросы.</p>
-        <p class="red-text">ДАННЫЙ РАЗДЕЛ ВРЕМЕННО ПУСУЕТ.</p>
-    </main>
-    <script> function goToPage(url) { window.location.href = url; } </script>
-    <footer style="display: flex; justify-content: center;">
-        <div style="display: flex; flex-direction: column;">
-            <button class="button prestndinside" data-text="Awesome">
-                <span class="actual-text">&nbsp;insiderkeeps&nbsp;</span>
-                <span aria-hidden="true" class="hover-text">&nbsp;insiderkeeps&nbsp;</span>
-            </button>
-            <button class="button prestndinside" data-text="Awesome">
-                <span class="actual-text">&nbsp;2023&nbsp;</span>
-            <span aria-hidden="true" class="hover-text">&nbsp;2023&nbsp;</span>
-            </button>
+        
+        <div class="faq">
+            <div class="question-container">
+                <div class="question">
+
+                    <h3>1. Как я могу скачать проект "Telegram-Helper"?</h3>
+                    <button class="expand-button">Развернуть</button>
+                    <div class="answer">
+                        <p>Вы можете скачать проект "Telegram-Helper", перейдя во вкладку <a href="https://farmerok.github.io/project">Проекты</a>.</p>
+                    </div>
+                </div>
+        
+                <div class="question">
+        
+                    <h3>2. Что делает проект "Telegram-MailReader"?</h3>
+                    <button class="expand-button">Развернуть</button>
+                    <div class="answer">
+                        <p>Проект "Telegram-MailReader" позволяет вам просматривать сообщения с вашей электронной почты напрямую через Telegram и видеть содержимое писем. Вы можете скачать архив <a href="https://farmerok.github.io/project">здесь</a>.</p>
+                    </div>
+                </div>
+        
+                <div class="question">
+                    <h3>3. Что за проект "PC Control [beta]" и когда он будет в релизе?</h3>
+                    <button class="expand-button">Развернуть</button>
+                    <div class="answer">
+                        <p>Проект "PC Control [beta]" позволяет управлять своим ПК дистанционно с помощью Telegram бота и представляет аналоговую версию "Telegram-Helper", но эта версия с интерфейсом. Проект находится на начальной стадии разработки, дата не известна.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const expandButtons = document.querySelectorAll(".expand-button");
+            const answers = document.querySelectorAll(".answer");
+    
+            expandButtons.forEach((button, index) => {
+                button.addEventListener("click", () => {
+                    if (answers[index].style.display === "block") {
+                        answers[index].style.display = "none";
+                        button.textContent = "Развернуть";
+                    } else {
+                        answers[index].style.display = "block";
+                        button.textContent = "Свернуть";
+                    }
+                });
+            });
+    
+            document.addEventListener("click", (event) => {
+                if (!event.target.closest(".question")) {
+                    answers.forEach((answer) => {
+                        answer.style.display = "none";
+                    });
+                    expandButtons.forEach((button) => {
+                        button.textContent = "Развернуть";
+                    });
+                }
+            });
+        });
+    </script>
+
+<footer>
+    <div class="footer-content">
+        <button class="button prestndinside" data-text="Awesome">
+            <span class="actual-text">&nbsp;insiderkeeps&nbsp;</span>
+            <span aria-hidden="true" class="hover-text">&nbsp;insiderkeeps&nbsp;</span>
+        </button>
+        <span class="actual-text" style="font-size: 24px; font-weight: bold; color: #ff0000;">&nbsp;2023&nbsp;</span>
+        <button class="button prestndinside" data-text="Awesome">
+            <span aria-hidden="true" class="hover-text">&nbsp;2023&nbsp;</span>
+        </button>
+    </div>
+</footer>
 </body>
 </html>

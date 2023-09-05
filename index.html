@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>IK - Главная</title>
-    <link type="image/png" sizes="64x64" rel="icon" href="icons/primary.png">
-    <link rel="stylesheet" href="css/styles.css">
-
+    <link rel="icon" href="icons/primary.png" sizes="64x64">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
 <body>
     <header>
         <button class="cti">
-            <div class="CTI"> insiderkeeps dev </div>
+            <div class="CTI"> InsiderKeeps Dev </div>
         </button>
         <nav>
             <a class="animbutt" href="project">Проекты</a>
@@ -18,25 +17,30 @@
         </nav>
     </header>
     <main>
-        <h2>Добро пожаловать на главную страницу!</h2>
-        <p class="blue-text">На данном сайте вы можете скачать актуальную версию скрипта и ознакомиться с информацией о новых скриптах.</p>
-        <p class="blue-text">Если у вас возникли интересующие вопросы, пожалуйста, обратитесь к разделу FAQ.</p>
-        <p class="red-text">Прочитали всё? Тогда переходите в раздел "Проекты" для дальнейшего изучения.</p>
-
+        <h1><span style="color: rgba(154, 137, 156, 0.63);">Добро пожаловать на страницу разработчика!</span></h1>
+        <p class="blue-text"><span style="color: rgba(184, 72, 53, 0.952);">InsiderKeeps</span> - это ваш надежный партнер в мире программного обеспечения. Мы предоставляем актуальные программы и полезную информацию для вас.</p>
+        <p class="blue-text">Скачайте наши программы и ознакомьтесь с информацией, которая поможет вам успешно использовать наше ПО.</p>
+        <p class="blue-text">Если у вас возникли вопросы, обратитесь к разделу <span style="color: rgba(255, 238, 0, 0.63);">FAQ</span>, чтобы найти ответы на часто задаваемые вопросы.</p>
+        <p class="red-text">Пройдите в раздел <span style="color: rgba(255, 238, 0, 0.63);">Проекты</span>, чтобы узнать больше о наших актуальных проектах и возможностях.</p>
     </main>
-    <script> function goToPage(url) { window.location.href = url; } </script>
-
-    <footer style="display: flex; justify-content: center;">
-        <div style="display: flex; flex-direction: column;">
+    
+    <footer>
+        <div class="footer-content">
             <button class="button prestndinside" data-text="Awesome">
                 <span class="actual-text">&nbsp;insiderkeeps&nbsp;</span>
                 <span aria-hidden="true" class="hover-text">&nbsp;insiderkeeps&nbsp;</span>
             </button>
+            <span class="actual-text" style="font-size: 24px; font-weight: bold; color: #ff0000;">&nbsp;2023&nbsp;</span>
             <button class="button prestndinside" data-text="Awesome">
-                <span class="actual-text">&nbsp;2023&nbsp;</span>
-            <span aria-hidden="true" class="hover-text">&nbsp;2023&nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;2023&nbsp;</span>
             </button>
         </div>
     </footer>
+
+    <script type="text/javascript">
+        function goToPage(url) {
+            window.location.href = url;
+        }
+    </script>
 </body>
 </html>
