@@ -173,7 +173,7 @@ from {
 }
 
 50% {
-    border-color: #bd1919
+    border-color: #e67519
 }
 }
 /* test*/
@@ -183,11 +183,11 @@ from {
     padding: 12px 20px;
     margin: 10px;
     font-size: 18px;
-    color: #ffffff;
+    color: #ffcfcf;
     text-decoration: none;
-    background-color: #252522;
+    background-color: #242721;
     border-radius: 30px;
-    border: 2px solid #da4d83fb;
+    border: 2px solid #8d1f0bfb;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -217,7 +217,7 @@ from {
   .button.prestndinside {
     --border-right: 6px;
     --text-stroke-color: rgba(255,255,255,0.6);
-    --animation-color: #9c1919fb;
+    --animation-color: #421b1bfb;
     --fs-size: 2em;
     letter-spacing: 3px;
     text-decoration: none;
@@ -329,10 +329,10 @@ from {
 /* ONLY TAB PROJECT */
 /* Контейнер для вопроса */
 .question-container {
-    max-height: 325px; /* Установите нужную высоту */
+    max-height: 325px;
     overflow-y: auto;
-    background-color: #351c38; /* Задайте желаемый цвет фона */
-    padding: 10px; /* Добавьте отступы к контейнеру по желанию */
+    background-color: #351c38;
+    padding: 10px;
 }
 .answer {
     display: none;
