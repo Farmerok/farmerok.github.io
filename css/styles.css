@@ -34,15 +34,12 @@ header nav {
     margin-right: +40px;
 }
 
-/* Original styles for header navigation links */
 header nav a {
     color: #ffaf01;
     text-decoration: none;
     font-size: 22px;
     position: relative;
 }
-
-/* Hover styles */
 header nav a:hover {
     color: #7c0b0b;
 }
@@ -112,17 +109,15 @@ footer {
 }
 /* NAME PROJECT */
 .project-name {
-    color: #cdcec1dc; /* Новый цвет (например, красный) */
-    
-    /* Дополнительные стили */
+    color: #cdcec1dc;
 }
 
 /* ONLY TAB PROJECT */
 .project-table-container {
-    max-height: 300px; /* Adjust the height as needed */
+    max-height: 300px;
     overflow-y: auto;
-    background-color: #313105; /* Set your desired background color */
-    padding: 10px; /* Add padding to the container if desired */
+    background-color: #313105;
+    padding: 10px;
 }
 
 /* PRIMARY INSIDERKEEPS */
@@ -176,7 +171,6 @@ from {
     border-color: #e67519
 }
 }
-/* test*/
 /* Button styles */
 .animbutt {
     display: inline-block;
@@ -327,7 +321,6 @@ from {
 
 /* ASK - ANSER*/
 /* ONLY TAB PROJECT */
-/* Контейнер для вопроса */
 .question-container {
     max-height: 325px;
     overflow-y: auto;
