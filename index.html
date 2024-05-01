@@ -1,15 +1,44 @@
 <!DOCTYPE html>
-<html>
 <head>
     <meta charset="UTF-8">
-    <title>IK - Главная</title>
+    <title id="homePage-text"></title>
     <link rel="icon" href="icons/primary.png" sizes="64x64">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
 <body>
     <style>
-        header, main, footer {
-            box-shadow: 0 2px 4px rgba(221, 1, 1, 0.863);
+        .language-select {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 9999;
+            background-color: #9e6060;
+            padding: 8px 12px;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .language-select:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgb(117, 51, 6);
+        }
+
+        .language-select label {
+            color: #333;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .language-select select {
+            padding: 1px 12px;
+            border-radius: 20px;
+            background-color: #b68f83;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s;
+            appearance: none;
+            -webkit-appearance: none;
         }
     </style>
     
@@ -18,16 +47,26 @@
             <div class="CTI"> InsiderKeeps Dev </div>
         </button>
         <nav>
-            <a class="animbutt" href="project">Проекты</a>
-            <a class="animbutt" href="faq">FAQ</a>
+            <a class="animbutt" href="project"><span id="button_procejts"></span></a>
+            <a class="animbutt" href="project"><span id="faqPage"></span></a>
         </nav>
+        <div class="language-select">
+            <label for="language"><span id="Language_Current"></span></label>
+            <span id="selected-language"></span>
+            <select id="language" onchange="changeLanguage(this.value)">
+                <option id="select_language"></option>
+                <option value="en">English</option>
+                <option value="ru">Русский</option>
+                <option value="uk">Українська</option>
+            </select>
+        </div>
     </header>
     <main>
-        <h1><span style="color: rgba(154, 137, 156, 0.63);">Добро пожаловать на страницу разработчика!</span></h1>
-        <p class="blue-text"><span style="color: rgba(184, 72, 53, 0.952);">InsiderKeeps</span> - это ваш надежный партнер в мире программного обеспечения. Мы предоставляем актуальные программы и полезную информацию для вас.</p>
-        <p class="blue-text">Скачайте наши программы и ознакомьтесь с информацией, которая поможет вам успешно использовать наше ПО.</p>
-        <p class="blue-text">Если у вас возникли вопросы, обратитесь к разделу <span style="color: rgba(255, 238, 0, 0.63);">FAQ</span>, чтобы найти ответы на часто задаваемые вопросы.</p>
-        <p class="red-text">Пройдите в раздел <span style="color: rgba(255, 238, 0, 0.63);">Проекты</span>, чтобы узнать больше о наших актуальных проектах и возможностях.</p>
+        <h1><span style="color: rgba(154, 137, 156, 0.63);" id="welcome-text"></span></h1>
+        <p class="blue-text"><span style="color: rgba(184, 72, 53, 0.952);" id="partner-name"></span> - <span id="partner-description"></span></p>
+        <p class="blue-text"><span id="download-info"></span></p>
+        <p class="blue-text"><span id="questions-info"></span></p>
+        <p class="red-text"><span id="projects-info"></span></p>
     </main>
     
     <footer>
@@ -43,10 +82,47 @@
         </div>
     </footer>
 
+    <script src="locales.js" type="text/javascript"></script>
+
     <script type="text/javascript">
         function goToPage(url) {
             window.location.href = url;
         }
+        function hideSelectLanguageOption() {
+            const selectLanguageOption = document.querySelector('#language option[value=""]');
+            if (selectLanguageOption) {
+                selectLanguageOption.style.display = 'none';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            hideSelectLanguageOption();
+        });
+
+        function changeLanguage(lang) {
+            localStorage.setItem('lang', lang);
+            updateTexts();
+        }
+
+        function updateTexts() {
+            const lang = localStorage.getItem('lang') || 'ru';
+            const texts = locales[lang];
+
+            document.getElementById('select_language').textContent = texts['select_language'];
+            document.getElementById('Language_Current').textContent = texts['current_language'];
+            document.getElementById('homePage-text').textContent = texts['homePage'];
+            document.getElementById('welcome-text').textContent = texts['welcome'];
+            document.getElementById('partner-name').textContent = texts['partner-name'];
+            document.getElementById('faqPage').textContent = texts['faqPage-text'];
+            document.getElementById('partner-description').textContent = texts['partner-description'];
+            document.getElementById('download-info').textContent = texts['download-info'];
+            document.getElementById('questions-info').textContent = texts['questions-info'];
+            document.getElementById('button_procejts').textContent = texts['button_procejts'];
+
+            document.getElementById('selected-language').textContent = lang.toUpperCase();
+        }
+
+        updateTexts();
     </script>
 </body>
 </html>

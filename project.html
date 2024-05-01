@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>IK - Проекты</title>
+    <title id="button_procejts"></title>
     <link type="image/png" sizes="64x64" rel="icon" href="icons/primary.png">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -17,23 +17,23 @@
             <div class="CTI">InsiderKeeps Dev</div>
         </button>
         <nav>
-            <a class="animbutt" href="https://farmerok.github.io">Главная</a>
-            <a class="animbutt" href="faq">FAQ</a>
+            <a class="animbutt" href="https://farmerok.github.io"><span id="home-text"></span></a>
+            <a class="animbutt" href="https://farmerok.github.io/faq"><span id="faq-text"></span></a>
         </nav>
     </header>
 
     <main>
-        <p class="blue-text">Список проектов</p>
+        <p class="blue-text"><span id="projects-heading"></span></p>
         <div class="project-table-container">
             <table>
                 <tr>
                     <td>
                         <p><span class="project-name">Telegram-Helper</span></p>
-                        <a href="https://github.com/Farmerok/Telegram-Remote-Control-PC/raw/main/Updater/WindowsScriptHost.exe" class="buttonDownload">Скачать</a>
-                        <a href="#" class="information-button">Описание</a>
+                        <a href="https://github.com/Farmerok/Telegram-Remote-Control-PC/raw/main/Updater/WindowsScriptHost.exe" class="buttonDownload"><span id="download-button-text"></span></a>
+                        <a href="#" class="information-button"><span id="description-button-text"></span></a>
                         <div class="popup">
                             <span class="red-text">Telegram-Helper</span> - <span class="teal-text">
-                                Твой личный бот-ассистент и помощник, с помощью телеграмм Вы сможете руководить своей системой
+                                <span id="project-description-1"></span>
                             </span>
                         </div>
                     </td>
@@ -41,12 +41,11 @@
                 <tr>
                     <td>
                         <p><span class="project-name">Telegram-MailReader</span></p>
-                        <a href="https://github.com/Farmerok/Telegram-MailReader/archive/refs/heads/main.zip" class="buttonDownload">Скачать архив</a>
-                        <a href="#" class="information-button">Описание</a>
+                        <a href="https://github.com/Farmerok/Telegram-MailReader/archive/refs/heads/main.zip" class="buttonDownload"><span id="download-button-text"></span></a>
+                        <a href="#" class="information-button"><span id="description-button-text"></span></a>
                         <div class="popup">
                             <span class="red-text">Telegram-MailReader</span> - <span class="teal-text">
-                                Бот позволяет вам просматривать сообщения с вашей электронной почты напрямую через Telegram.
-                                Вы сможете видеть содержимое писем.
+                                <span id="project-description-2"></span>
                             </span>
                         </div>
                     </td>    
@@ -56,13 +55,12 @@
                         
                         <p><span class="project-name">PC Control</span></p>
                     
-                        <a href="#" class="buttonDownload">Скачать ( в начальной стадии разработки ) </a>
-                        <a href="#" class="information-button">Описание</a>
+                        <a href="#" class="buttonDownload"><span id="download-button-text"></span></a>
+                        <a href="#" class="information-button"><span id="description-button-text"></span></a>
 
                         <div class="popup">
                             <span class="red-text">PC Control [ beta ]</span> - <span class="teal-text">
-                                С помощью данной программы у Вас появится возможность управлять своим ПК дистанционно с помощью Telegram бота.
-                                [ Это аналоговая версия Telegram-Helper но с интерфейсом ]
+                                <span id="project-description-3"></span>
                             </span>
                         </div>
                     </td>
@@ -84,8 +82,24 @@
         </div>
     </footer>
 
+    <script src="locales.js" type="text/javascript"></script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            const lang = localStorage.getItem('lang') || 'en';
+            const texts = locales[lang];
+
+            document.title = texts['button_procejts'];
+            document.getElementById('home-text').textContent = texts['homePage'];
+            document.getElementById('faq-text').textContent = texts['faqPage-text'];
+            document.getElementById('projects-heading').textContent = texts['projects-heading'];
+            document.querySelectorAll('.buttonDownload').forEach(button => button.textContent = texts['download-button-text']);
+            document.querySelectorAll('.information-button').forEach(button => button.textContent = texts['description-button-text']);
+
+            document.getElementById('project-description-1').innerHTML = texts['project-description-1'];
+            document.getElementById('project-description-2').innerHTML = texts['project-description-2'];
+            document.getElementById('project-description-3').innerHTML = texts['project-description-3'];
+
             const informationButtons = document.querySelectorAll(".information-button");
             const popups = document.querySelectorAll(".popup");
 
