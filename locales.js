@@ -30,7 +30,6 @@ const locales = {
         'download-button-text': 'Download',
         'project-description-1': 'Your personal bot-assistant and helper, with Telegram you can control your system.',
         'project-description-2': 'The bot allows you to view messages from your email directly through Telegram. You can see the contents of emails.',
-        'project-description-3': 'With this program, you will be able to remotely control your PC using a Telegram bot. [This is an analog version of Telegram-Helper but with an interface.]',
     },
     'ru': {
         /* for index.html */
@@ -63,7 +62,6 @@ const locales = {
         'description-button-text': 'Описание',
         'project-description-1': 'Ваш личный бот-ассистент и помощник, с помощью Telegram вы можете управлять своей системой.',
         'project-description-2': 'Бот позволяет вам просматривать сообщения с вашей электронной почты напрямую через Telegram. Вы сможете видеть содержимое писем.',
-        'project-description-3': 'С помощью этой программы вы сможете управлять своим ПК удаленно с помощью Telegram бота. [Это аналоговая версия Telegram-Helper, но с интерфейсом.]',
     },
     'uk': {
         /* for index.html */
@@ -95,6 +93,5 @@ const locales = {
         'description-button-text': 'Опис',
         'project-description-1': 'Ваш особистий бот-асистент і помічник, за допомогою Telegram ви можете керувати своєю системою.',
         'project-description-2': 'Бот дозволяє вам переглядати повідомлення з вашої електронної пошти безпосередньо через Telegram. Ви зможете бачити вміст листів.',
-        'project-description-3': 'За допомогою цієї програми ви зможете керувати своїм ПК віддалено за допомогою Telegram бота. [Це аналогова версія Telegram-Helper, але з інтерфейсом.]'
     }
 };
