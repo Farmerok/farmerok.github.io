@@ -15,13 +15,10 @@ const locales = {
         'button_procejts': 'Project',
         'welcome-faq': 'Welcome to the FAQ section!',
         'description': 'Here you can find answers to frequently asked questions.',
-        
         'question-1': 'How to download the "Telegram-Helper" project?',
         'answer-1': 'You can download the "Telegram-Helper" project by going to the <a href="https://farmerok.github.io/project">Projects</a> tab.',
-        
         'question-2': 'How to download the "Telegram-Helper" project?',
         'answer-2': 'The "Telegram-MailReader" project allows you to view messages from your email directly through Telegram and see the contents of emails. You can download the archive <a href="https://farmerok.github.io/project">here</a>.',
-        
         'expand-button-text': 'Expand',
         'collapse-button-text': 'Collapse',
         /* for project.html */
@@ -30,6 +27,7 @@ const locales = {
         'download-button-text': 'Download',
         'project-description-1': 'Your personal bot-assistant and helper, with Telegram you can control your system.',
         'project-description-2': 'The bot allows you to view messages from your email directly through Telegram. You can see the contents of emails.',
+        'project-description-3': 'Simple and easy to set up and use Auto Clicker. Choose the application, set the time until it will click and START!'
     },
     'ru': {
         /* for index.html */
@@ -47,13 +45,10 @@ const locales = {
         'button_procejts': 'Проекты',
         'welcome-faq': 'Добро пожаловать в раздел FAQ!',
         'description': 'Здесь вы можете найти ответы на часто задаваемые вопросы.',
-        
         'question-1': 'Как скачать проект "Telegram-Helper"?',
         'answer-1': 'Вы можете скачать проект "Telegram-Helper", перейдя во вкладку <a href="https://farmerok.github.io/project">Проекты</a>.',
-        
         'question-2': 'Как скачать проект "Telegram-MailReader"?',
         'answer-2': 'Проект "Telegram-MailReader" позволяет вам просматривать сообщения с вашей электронной почты напрямую через Telegram и видеть содержимое писем. Вы можете скачать архив <a href="https://farmerok.github.io/project">здесь</a>.',
-        
         'expand-button-text': 'Развернуть',
         'collapse-button-text': 'Свернуть',
         /* for project.html */
@@ -62,6 +57,7 @@ const locales = {
         'description-button-text': 'Описание',
         'project-description-1': 'Ваш личный бот-ассистент и помощник, с помощью Telegram вы можете управлять своей системой.',
         'project-description-2': 'Бот позволяет вам просматривать сообщения с вашей электронной почты напрямую через Telegram. Вы сможете видеть содержимое писем.',
+        'project-description-3': 'Простой в настройки и в использовании Авто Кликер. Выбираете приложение, ставите время через сколько будет кликать и СТАРТ!'
     },
     'uk': {
         /* for index.html */
@@ -79,12 +75,10 @@ const locales = {
         'button_procejts': 'Проекти',
         'welcome-faq': 'Ласкаво просимо в розділ FAQ!',
         'description': 'Тут ви можете знайти відповіді на часто задавані питання.',
-        
         'question-1': 'Як скачати "Telegram-Helper"?',
         'answer-1': 'Ви можете скачати перейшовши до вкладки <a href="https://farmerok.github.io/project">Проекти</a>.',
         'question-2': 'Як скачати проект "Telegram-MailReader"?',
         'answer-2': 'Проект "Telegram-MailReader" дозволяє вам переглядати повідомлення з вашої електронної пошти безпосередньо через Telegram і бачити зміст листів. Ви можете завантажити архів <a href="https://farmerok.github.io/project">тут</a>.',
-    
         'expand-button-text': 'Розгорнути',
         'collapse-button-text': 'Згорнути',
         /* for project.html */
@@ -93,5 +87,6 @@ const locales = {
         'description-button-text': 'Опис',
         'project-description-1': 'Ваш особистий бот-асистент і помічник, за допомогою Telegram ви можете керувати своєю системою.',
         'project-description-2': 'Бот дозволяє вам переглядати повідомлення з вашої електронної пошти безпосередньо через Telegram. Ви зможете бачити вміст листів.',
+        'project-description-3': 'Простий і легкий у налаштуванні та використанні Авто Клікер. Виберіть програму, встановіть час до клацання і ПОЧАТИ!'
     }
 };
