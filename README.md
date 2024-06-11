@@ -1,20 +1,20 @@
-# Привет
-Приветствую тебя в репозитории сайта - [farmerok.github.io](farmerok.github.io/)
+# Hello
 
-# 📂 Структура репозитория
+Welcome to the repository of the website - [farmerok.github.io](farmerok.github.io/)
+📂 Repository Structure
 
-- Каждый проект имеет свою собственную папку с соответствующим названием. 
-- Внутри каждой папки вы найдете описание проекта, полезные инструкции и всю необходимую документацию.
+- Each project has its own folder with a corresponding name.
+- Inside each folder, you will find a project description, useful instructions, and all necessary documentation.
 
-# 🔗 Взаимодействие и отзывы
+🔗 Interaction and Feedback
 
-- Я всегда открыт для обратной связи и предложений. Если у вас есть какие-либо идеи или комментарии по поводу моих проектов, 
-  не стесняйтесь создать новый Issue или отправить Pull Request. Ваш вклад очень ценен для меня!
+- I am always open to feedback and suggestions. If you have any ideas or comments about my projects,
+- feel free to create a new Issue or submit a Pull Request. Your contribution is very valuable to me!
 
-# 🙏 Благодарность
+🙏 Gratitude
 
-- Спасибо, что заглянули на мой GitHub профиль и заинтересовались моими проектами. 
-  Надеюсь, они вас вдохновят или помогут вам в вашем собственной разработки. 
-  Следите за обновлениями, всё ещё впереди 🙃
+- Thank you for visiting my GitHub profile and showing interest in my projects.
+- I hope they inspire you or assist you in your own development work.
+- Stay tuned for updates, there's more to come 🙃
 
-# С уважением - insidekeeps
+# Sincerely - insidekeeps
