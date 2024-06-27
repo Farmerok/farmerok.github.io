@@ -59,7 +59,7 @@ const locales = {
         'project-description-2': 'Бот позволяет вам просматривать сообщения с вашей электронной почты напрямую через Telegram. Вы сможете видеть содержимое писем.',
         'project-description-3': 'Простой в настройки и в использовании Авто Кликер. Выбираете приложение, ставите время через сколько будет кликать и СТАРТ!'
     },
-    'uk': {
+    'ua': {
         /* for index.html */
         'current_language': 'Поточна мова:',
         'select_language': 'Виберіть мову:',
@@ -88,5 +88,36 @@ const locales = {
         'project-description-1': 'Ваш особистий бот-асистент і помічник, за допомогою Telegram ви можете керувати своєю системою.',
         'project-description-2': 'Бот дозволяє вам переглядати повідомлення з вашої електронної пошти безпосередньо через Telegram. Ви зможете бачити вміст листів.',
         'project-description-3': 'Простий і легкий у налаштуванні та використанні Авто Клікер. Виберіть програму, встановіть час до клацання і ПОЧАТИ!'
+    },
+    'es': {
+        /* for index.html */
+        'current_language': 'Idioma actual:',
+        'select_language': 'Seleccione el idioma:',
+        'homePage': 'Inicio',
+        'faqPage-text': 'Preguntas frecuentes',
+        'welcome': '¡Bienvenido a la página del desarrollador!',
+        'partner-name': 'InsiderKeeps',
+        'partner-description': 'es su socio confiable en el mundo del software. Proporcionamos programas actualizados e información útil para usted.',
+        'download-info': 'Descargue nuestros programas y consulte la información que le ayudará a utilizar nuestro software con éxito.',
+        'questions-info': 'Si tiene alguna pregunta, consulte la sección de Preguntas frecuentes para encontrar respuestas a las preguntas más comunes.',
+        'projects-info': 'Vaya a la sección de Proyectos para obtener más información sobre nuestros proyectos actuales y oportunidades.',
+        /* for faq.html */
+        'button_procejts': 'Proyectos',
+        'welcome-faq': '¡Bienvenido a la sección de Preguntas frecuentes!',
+        'description': 'Aquí puede encontrar respuestas a las preguntas más comunes.',
+        'question-1': '¿Cómo descargar el proyecto "Telegram-Helper"?',
+        'answer-1': 'Puede descargar el proyecto "Telegram-Helper" visitando la pestaña <a href="https://farmerok.github.io/project">Proyectos</a>.',
+        'question-2': '¿Cómo descargar el proyecto "Telegram-MailReader"?',
+        'answer-2': 'El proyecto "Telegram-MailReader" le permite ver los mensajes de su correo electrónico directamente a través de Telegram y ver el contenido de los correos. Puede descargar el archivo <a href="https://farmerok.github.io/project">aquí</a>.',
+        'expand-button-text': 'Expandir',
+        'collapse-button-text': 'Colapsar',
+        /* for project.html */
+        'projects-heading': 'Lista de proyectos',
+        'download-button-text': 'Descargar',
+        'description-button-text': 'Descripción',
+        'project-description-1': 'Su asistente personal de bot y ayudante, con Telegram puede gestionar su sistema.',
+        'project-description-2': 'El bot le permite ver los mensajes de su correo electrónico directamente a través de Telegram. Podrá ver el contenido de los correos.',
+        'project-description-3': 'Auto Clicker fácil de configurar y usar. Elija la aplicación, configure el tiempo de clic y ¡COMIENZA!'
     }
+
 };
