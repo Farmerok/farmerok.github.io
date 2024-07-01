@@ -6,6 +6,41 @@
     <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
 <body>
+    <style>
+        .language-select {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 9999;
+            background-color: #3a3030;
+            padding: 8px 12px;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgb(255, 1, 1);
+            transition: all 0.3s ease;
+        }
+
+        .language-select:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgb(73, 255, 1);
+        }
+
+        .language-select label {
+            color: #d18989;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .language-select select {
+            padding: 1px 12px;
+            border-radius: 20px;
+            background-color: #b68f83;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+    </style>
     <header>
         <button class="cti">
             <div class="CTI"> InsiderKeeps Dev </div>
