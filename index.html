@@ -83,45 +83,6 @@
     </footer>
 
     <script src="locales.js" type="text/javascript"></script>
-
-    <script type="text/javascript" async>
-        function goToPage(url) {
-            window.location.href = url;
-        }
-        function hideSelectLanguageOption() {
-            const selectLanguageOption = document.querySelector('#language option[value=""]');
-            if (selectLanguageOption) {
-                selectLanguageOption.style.display = 'none';
-            }
-        }
-    
-        document.addEventListener('DOMContentLoaded', function() {
-            hideSelectLanguageOption();
-        });
-    
-        function changeLanguage(lang) {
-            localStorage.setItem('lang', lang);
-            updateTexts();
-        }
-    
-        function updateTexts() {
-            const lang = localStorage.getItem('lang') || 'ru';
-            const texts = locales[lang];
-    
-            document.getElementById('select_language').textContent = texts['select_language'];
-            document.getElementById('Language_Current').textContent = texts['current_language'];
-            document.getElementById('homePage-text').textContent = texts['homePage'];
-            document.getElementById('welcome-text').textContent = texts['welcome'];
-            document.getElementById('partner-name').textContent = texts['partner-name'];
-            document.getElementById('faqPage').textContent = texts['faqPage-text'];
-            document.getElementById('partner-description').textContent = texts['partner-description'];
-            document.getElementById('download-info').textContent = texts['download-info'];
-            document.getElementById('questions-info').textContent = texts['questions-info'];
-            document.getElementById('button_procejts').textContent = texts['button_procejts'];
-    
-            document.getElementById('selected-language').textContent = lang.toUpperCase();
-        }
-        updateTexts();
-    </script>
+    <script src="scripts.js" type="text/javascript"></script>
 </body>
 </html>
