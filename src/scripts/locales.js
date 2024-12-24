@@ -1,7 +1,7 @@
 const locales = {
     'en': {
         /* for index.html */
-        'current_language': 'Сurrent language:',
+        'current_language': 'Current language:',
         'select_language': 'Select language:',
         'homePage': 'Home',
         'faqPage-text': 'FAQ',
@@ -12,12 +12,12 @@ const locales = {
         'questions-info': 'If you have any questions, refer to the FAQ section to find answers to frequently asked questions.',
         'projects-info': 'Go to the Projects section to learn more about our current projects and opportunities.',
         /* for faq.html */
-        'button_procejts': 'Project',
+        'button_procejts': 'Projects',
         'welcome-faq': 'Welcome to the FAQ section!',
         'description': 'Here you can find answers to frequently asked questions.',
         'question-1': 'How to download the Telegram-Helper project?',
         'answer-1': 'You can download the Telegram-Helper project by going to the <a href="https://farmerok.github.io/project">Projects</a> tab.',
-        'question-2': 'How to download the Telegram-Helper project?',
+        'question-2': 'How to download the MailReader project?',
         'answer-2': 'The MailReader project allows you to view messages from your email directly through Telegram and see the contents of emails. You can download the archive <a href="https://farmerok.github.io/project">here</a>.',
         'expand-button-text': 'Expand',
         'collapse-button-text': 'Collapse',
@@ -25,9 +25,9 @@ const locales = {
         'projects-heading': 'Project List',
         'description-button-text': 'Description',
         'download-button-text': 'Download',
-        'project-description-1': 'Your personal bot-assistant and helper, with Telegram you can control your system.',
+        'project-description-1': 'Your personal bot-assistant and helper. With Telegram, you can control your system.',
         'project-description-2': 'The bot allows you to view messages from your email directly through Telegram. You can see the contents of emails.',
-        'project-description-3': 'Simple and easy to set up and use Auto Clicker. Choose the application, set the time until it will click and START!'
+        'project-description-3': 'Simple and easy to set up and use Auto Clicker. Choose the application, set the time until it clicks, and START!'
     },
     'ru': {
         /* for index.html */
@@ -47,7 +47,7 @@ const locales = {
         'description': 'Здесь вы можете найти ответы на часто задаваемые вопросы.',
         'question-1': 'Как скачать проект Telegram-Helper?',
         'answer-1': 'Вы можете скачать проект Telegram-Helper, перейдя во вкладку <a href="https://farmerok.github.io/project">Проекты</a>.',
-        'question-2': 'Как скачать проект Telegram MailReader?',
+        'question-2': 'Как скачать проект MailReader?',
         'answer-2': 'Проект MailReader позволяет вам просматривать сообщения с вашей электронной почты напрямую через Telegram и видеть содержимое писем. Вы можете скачать архив <a href="https://farmerok.github.io/project">здесь</a>.',
         'expand-button-text': 'Развернуть',
         'collapse-button-text': 'Свернуть',
@@ -55,9 +55,9 @@ const locales = {
         'projects-heading': 'Список проектов',
         'download-button-text': 'Скачать',
         'description-button-text': 'Описание',
-        'project-description-1': 'Ваш личный бот-ассистент и помощник, с помощью Telegram вы можете управлять своей системой.',
+        'project-description-1': 'Ваш личный бот-ассистент и помощник. С помощью Telegram вы можете управлять своей системой.',
         'project-description-2': 'Бот позволяет вам просматривать сообщения с вашей электронной почты напрямую через Telegram. Вы сможете видеть содержимое писем.',
-        'project-description-3': 'Простой в настройки и в использовании Авто Кликер. Выбираете приложение, ставите время через сколько будет кликать и СТАРТ!'
+        'project-description-3': 'Простой в настройке и использовании Авто Кликер. Выберите приложение, установите время, через которое будет кликать, и нажмите СТАРТ!'
     },
     'ua': {
         /* for index.html */
@@ -65,29 +65,29 @@ const locales = {
         'select_language': 'Виберіть мову:',
         'homePage': 'Головна',
         'faqPage-text': 'FAQ',
-        'welcome': 'Ласкаво просимо на сторінку розробника',
+        'welcome': 'Ласкаво просимо на сторінку розробника!',
         'partner-name': 'InsiderKeeps',
         'partner-description': 'це ваш надійний партнер у світі програмного забезпечення. Ми надаємо актуальні програми та корисну інформацію для вас.',
         'download-info': 'Завантажте наші програми та ознайомтеся з інформацією, яка допоможе вам успішно використовувати наше ПЗ.',
-        'questions-info': 'Якщо у вас виникли питання, зверніться до розділу ( FAQ ), щоб знайти відповіді на часто задавані питання.',
+        'questions-info': 'Якщо у вас виникли питання, зверніться до розділу FAQ, щоб знайти відповіді на часто задавані питання.',
         'projects-info': 'Перейдіть у розділ Проекти, щоб дізнатися більше про наші актуальні проекти та можливості.',
         /* for faq.html */
         'button_procejts': 'Проекти',
         'welcome-faq': 'Ласкаво просимо в розділ FAQ!',
         'description': 'Тут ви можете знайти відповіді на часто задавані питання.',
-        'question-1': 'Як скачати Telegram-Helper?',
-        'answer-1': 'Ви можете скачати перейшовши до вкладки <a href="https://farmerok.github.io/project">Проекти</a>.',
-        'question-2': 'Як скачати проект Telegram-MailReader?',
-        'answer-2': 'Проект - MailReader дозволяє вам переглядати повідомлення з вашої електронної пошти безпосередньо через Telegram і бачити зміст листів. Ви можете завантажити архів <a href="https://farmerok.github.io/project">тут</a>.',
+        'question-1': 'Як завантажити проект Telegram-Helper?',
+        'answer-1': 'Ви можете завантажити проект Telegram-Helper, перейшовши до вкладки <a href="https://farmerok.github.io/project">Проекти</a>.',
+        'question-2': 'Як завантажити проект MailReader?',
+        'answer-2': 'Проект MailReader дозволяє вам переглядати повідомлення з вашої електронної пошти безпосередньо через Telegram і бачити вміст листів. Ви можете завантажити архів <a href="https://farmerok.github.io/project">тут</a>.',
         'expand-button-text': 'Розгорнути',
         'collapse-button-text': 'Згорнути',
         /* for project.html */
         'projects-heading': 'Список проектів',
         'download-button-text': 'Завантажити',
         'description-button-text': 'Опис',
-        'project-description-1': 'Ваш особистий бот-асистент і помічник, за допомогою Telegram ви можете керувати своєю системою.',
+        'project-description-1': 'Ваш особистий бот-асистент і помічник. За допомогою Telegram ви можете керувати своєю системою.',
         'project-description-2': 'Бот дозволяє вам переглядати повідомлення з вашої електронної пошти безпосередньо через Telegram. Ви зможете бачити вміст листів.',
-        'project-description-3': 'Простий і легкий у налаштуванні та використанні Авто Клікер. Виберіть програму, встановіть час до клацання і ПОЧАТИ!'
+        'project-description-3': 'Простий і легкий у налаштуванні та використанні Авто Клікер. Виберіть програму, встановіть час до кліку і натисніть ПОЧАТИ!'
     },
     'es': {
         /* for index.html */
@@ -107,16 +107,16 @@ const locales = {
         'description': 'Aquí puede encontrar respuestas a las preguntas más comunes.',
         'question-1': '¿Cómo descargar el proyecto Telegram-Helper?',
         'answer-1': 'Puede descargar el proyecto Telegram-Helper visitando la pestaña <a href="https://farmerok.github.io/project">Proyectos</a>.',
-        'question-2': '¿Cómo descargar el proyecto Telegram-MailReader?',
-        'answer-2': 'El proyecto - MailReader le permite ver los mensajes de su correo electrónico directamente a través de Telegram y ver el contenido de los correos. Puede descargar el archivo <a href="https://farmerok.github.io/project">aquí</a>.',
+        'question-2': '¿Cómo descargar el proyecto MailReader?',
+        'answer-2': 'El proyecto MailReader le permite ver los mensajes de su correo electrónico directamente a través de Telegram y ver el contenido de los correos. Puede descargar el archivo <a href="https://farmerok.github.io/project">aquí</a>.',
         'expand-button-text': 'Expandir',
         'collapse-button-text': 'Colapsar',
         /* for project.html */
         'projects-heading': 'Lista de proyectos',
         'download-button-text': 'Descargar',
         'description-button-text': 'Descripción',
-        'project-description-1': 'Su asistente personal de bot y ayudante, con Telegram puede gestionar su sistema.',
+        'project-description-1': 'Su asistente personal de bot y ayudante. Con Telegram puede gestionar su sistema.',
         'project-description-2': 'El bot le permite ver los mensajes de su correo electrónico directamente a través de Telegram. Podrá ver el contenido de los correos.',
-        'project-description-3': 'Auto Clicker fácil de configurar y usar. Elija la aplicación, configure el tiempo de clic y ¡COMIENZA!'
+        'project-description-3': 'Auto Clicker fácil de configurar y usar. Elija la aplicación, configure el tiempo de clic y ¡COMIENCE!'
     }
 };
