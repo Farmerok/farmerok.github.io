@@ -15,6 +15,7 @@ const translations = {
         "skill-privacy": "Privacy",
 
         "projects-title": "My Products",
+        "button-download": "Download",
         "project1-description": "Your personal assistant that lets you control your PC from your phone from anywhere—manage sound, screen, files, watch in real-time, and more.",
         "project2-description": "A Telegram bot that lets you read your emails directly in Telegram. View email contents without switching apps.",
         "project3-description": "Simple and easy to set up and use Auto Clicker. Choose the application, set the time until it clicks, and START!",
@@ -35,6 +36,7 @@ const translations = {
         "skill-privacy": "Конфіденційність",
 
         "projects-title": "Мої Продукти",
+        "button-download": "Завантажити",
         "project1-description": "Ваш особистий асистент, з яким ви можете керувати своїм ПК з телефону з будь-якої точки світу—управляйте звуком, екраном, файлами, дивіться в реальному часі тощо.",
         "project2-description": "Телеграм-бот, який дозволяє читати ваші електронні листи прямо в Telegram. Переглядайте вміст листів без перемикання між додатками.",
         "project3-description": "Простий та зручний у налаштуванні Авто-Клікер Виберіть додаток, встановіть час до натискання та ПОЧНІТЬ!",
@@ -55,6 +57,7 @@ const translations = {
         "skill-privacy": "Конфиденциальность",
 
         "projects-title": "Мои Продукты",
+        "button-download": "Скачать",
         "project1-description": "Ваш личный ассистент, с которым вы можете с телефона управлять своим ПК откуда угодно—управлять звуком, экраном, файлами, смотреть в реальном времени и т. д.",
         "project2-description": "Телеграм-бот, который позволяет читать ваши электронные письма прямо в Telegram. Просматривайте содержимое писем без переключения между приложениями.",
         "project3-description": "Простой и удобный в настройке Авто-Кликер. Выберите приложение, установите время до клика и НАЧНИТЕ!",

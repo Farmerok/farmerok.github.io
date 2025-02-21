@@ -25,23 +25,42 @@ function getCookie(name) {
 
 let currentLang = getCookie('language') || 'en';
 
-// sunction to change language
+function toggleLanguageMenu() {
+    document.querySelector(".language-menu").classList.toggle("active");
+}
+
+document.addEventListener("click", (event) => {
+    const dropdown = document.querySelector(".lang-btn");
+    if (!dropdown.contains(event.target)) {
+        document.querySelector(".language-menu").classList.remove("active");
+    }
+});
+
 function changeLanguage(lang) {
-    currentLang = lang;
     document.documentElement.lang = lang;
-    setCookie('language', lang, 30); // save language preference for 30 days
-    
-    // Update all translatable elements
-    const elements = document.querySelectorAll('[data-lang]');
-    elements.forEach(element => {
-        const key = element.getAttribute('data-lang');
+    setCookie("language", lang, 30);
+
+    const langData = {
+        en: { name: "English", flag: "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" },
+        uk: { name: "Українська", flag: "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg" },
+        ru: { name: "Русский", flag: "https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg" }
+    };
+
+    // upd text and flag on button
+    document.getElementById("current-lang").textContent = langData[lang].name;
+    document.getElementById("current-flag").src = langData[lang].flag;
+
+    // update text if us
+    document.querySelectorAll("[data-lang]").forEach((element) => {
+        const key = element.getAttribute("data-lang");
         if (translations[lang] && translations[lang][key]) {
             element.textContent = translations[lang][key];
         }
     });
+
+    document.querySelector(".language-menu").classList.remove("active");
 }
 
-// smooth scroll for navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -76,5 +95,8 @@ window.addEventListener('scroll', () => {
     });
 });
 
+window.onload = function() {
+    window.scrollTo(0, 0);
+};
 // Initialize with saved language preference
 changeLanguage(currentLang);
