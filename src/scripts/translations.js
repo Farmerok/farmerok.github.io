@@ -19,7 +19,7 @@ const translations = {
         "project1-description": "Your personal assistant that lets you control your PC from your phone from anywhere—manage sound, screen, files, watch in real-time, and more.",
         "project2-description": "A Telegram bot that lets you read your emails directly in Telegram. View email contents without switching apps.",
         "project3-description": "Simple and easy to set up and use Auto Clicker. Choose the application, set the time until it clicks, and START!",
-        "project4-description": "This is an easy and convenient application that lives in a systemic tram and helps to keep your Windows basket under control!",
+        "project4-description": "This is an easy and convenient application that lives in a systemic tray and helps to keep your Windows basket under control!",
     },
     uk: {
         "nav-home": "Головна",
