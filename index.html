@@ -7,7 +7,6 @@
     <meta name="author" content="InsiderKeeps">
     <meta property="og:url" content="https://farmerok.github.io">
     <meta property="og:description" content="Discover useful software tools and applications created by InsiderKeeps. Enhance productivity and security with my software.">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="src/image/ico.png" sizes="64x64">
     <title>IK - Software Products</title>
@@ -16,40 +15,79 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <div id="animated-bg"></div>
+    <div id="particles-js"></div>
     <nav>
         <div class="nav-content">
-            <div class="logo">InsiderKeeps Dev
-            </div>
-            <div class="nav-contacts">
-                <a href="https://t.me/insiderkeeps" target="_blank"><i class="fab fa-telegram"></i></a>
-                <a href="mailto:insiderkeeps.dev@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.youtube.com/@IKDeveloper" target="_blank"><i class="fas fa-youtube"></i></a>
-            </div>
-            <div class="nav-links">
-                <a href="#hero" data-lang="nav-home"><i class="fas fa-home"></i> Home</a>
-                <a href="#about" data-lang="nav-about"><i class="fas fa-info-circle"></i> About</a>
-                <a href="#projects" data-lang="nav-projects"><i class="fas fa-cogs"></i> Products</a>
-            </div>
-            <div class="language-dropdown">
-                <button class="lang-btn" onclick="toggleLanguageMenu()">
-                    <img id="current-flag" src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="Flag" width="20"> 
-                    <span id="current-lang">English</span>
-                </button>
-                <div class="language-menu">
-                    <div class="language-option" onclick="changeLanguage('en')">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="English"> English
-                    </div>
-                    <div class="language-option" onclick="changeLanguage('uk')">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg" alt="Українська"> Українська
-                    </div>
-                    <div class="language-option" onclick="changeLanguage('ru')">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg" alt="Русский"> Русский
+            <div class="logo">InsiderKeeps Dev</div>
+            <div class="desktop-nav">
+                <div class="nav-links">
+                    <a href="#hero" data-lang="nav-home" class="active"><i class="fas fa-home"></i> Home</a>
+                    <a href="#about" data-lang="nav-about"><i class="fas fa-info-circle"></i> About</a>
+                    <a href="#projects" data-lang="nav-projects"><i class="fas fa-cogs"></i> Products</a>
+                </div>
+                <div class="nav-contacts">
+                    <a href="https://t.me/insiderkeeps" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="mailto:insiderkeeps.dev@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.youtube.com/@IKDeveloper" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="language-dropdown">
+                    <button class="lang-btn" onclick="toggleLanguageMenu(this)">
+                        <img id="current-flag" src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="Current language flag" width="20">
+                        <span id="current-lang">English</span>
+                    </button>
+                    <div class="language-menu">
+                        <div class="language-option" onclick="changeLanguage('en')">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="English"> English
+                        </div>
+                        <div class="language-option" onclick="changeLanguage('uk')">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg" alt="Українська"> Українська
+                        </div>
+                        <div class="language-option" onclick="changeLanguage('ru')">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg" alt="Русский"> Русский
+                        </div>
                     </div>
                 </div>
-            </div> 
+            </div>
+            <button class="hamburger" id="hamburger-button" aria-label="Toggle menu">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
         </div>
     </nav>
-
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="nav-links-mobile">
+            <a href="#hero" data-lang="nav-home"><i class="fas fa-home"></i> Home</a>
+            <a href="#about" data-lang="nav-about"><i class="fas fa-info-circle"></i> About</a>
+            <a href="#projects" data-lang="nav-projects"><i class="fas fa-cogs"></i> Products</a>
+        </div>
+        <div class="nav-contacts-mobile">
+            <a href="https://t.me/insiderkeeps" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="mailto:insiderkeeps.dev@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.youtube.com/@IKDeveloper" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="language-dropdown mobile-language">
+            <button class="lang-btn" onclick="toggleLanguageMenu(this)">
+                <img id="current-flag-mobile" src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="Current language flag" width="20">
+                <span id="current-lang-mobile">English</span>
+            </button>
+            <div class="language-menu">
+                <div class="language-option" onclick="changeLanguage('en')">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="English"> English
+                </div>
+                <div class="language-option" onclick="changeLanguage('uk')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg" alt="Українська"> Українська
+                </div>
+                <div class="language-option" onclick="changeLanguage('ru')">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg" alt="Русский"> Русский
+                </div>
+            </div>
+        </div>
+    </div>
     <section id="hero" class="section">
         <div class="container" data-aos="fade-up">
             <h1 class="title" data-lang="hero-title">Welcome to InsiderKeeps</h1>
@@ -62,26 +100,25 @@
             </div>
         </div>
     </section>
-
     <section id="about" class="section">
         <div class="container" data-aos="fade-up">
             <h2 class="section-title" data-lang="about-title">About Me</h2>
             <div class="about-content">
-                <div class="about-text" data-aos="fade-right">
+                <div class="about-text" data-aos="fade-up">
                     <p data-lang="about-description">I create and share useful software tools and applications. My goal is to provide solutions that enhance productivity and improve user experience.</p>
                     <div class="skills">
-                        <div class="skill-item">
+                        <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
                             <i class="fas fa-shield-alt"></i>
                             <span data-lang="skill-security">Security</span>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
                             <i class="fas fa-tachometer-alt"></i>
                             <span data-lang="skill-performance">Performance</span>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-aos="fade-up" data-aos-delay="300">
                             <i class="fas fa-user-shield"></i>
                             <span data-lang="skill-privacy">Privacy</span>
-                        </div>                       
+                        </div>
                     </div>
                 </div>
             </div>
@@ -91,7 +128,7 @@
         <div class="container" data-aos="fade-up">
             <h2 class="section-title" data-lang="projects-title">My Products</h2>
             <div class="projects-grid">
-                <div class="project-card" data-aos="fade-up">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                     <h3><i class="fas fa-bolt"></i> PCGuardControl</h3>
                     <p data-lang="project1-description">Advanced task management application with smart scheduling and priority system</p>
                     <div class="project-tags">
@@ -99,18 +136,20 @@
                         <span><i class="fas fa-desktop"></i> Windows 7-11</span>
                     </div>
                     <a href="https://github.com/Farmerok/Telegram-Remote-Control-PC/releases/latest" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i><span data-lang="button-download"> Download
+                        <i class="fas fa-download"></i><span data-lang="button-download"> Download</span>
                     </a>
-                    
-                    <h3><i class="fas fa-bolt"></i> BinDrop</h3>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fas fa-trash-alt"></i> BinDrop</h3>
                     <p data-lang="project4-description">This is an easy and convenient application that lives in a systemic tray and helps to keep your Windows basket under control!</p>
                     <div class="project-tags">
                         <span><i class="fas fa-desktop"></i> Windows 7-11</span>
                     </div>
                     <a href="https://github.com/Farmerok/BinDrop/releases/latest" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i><span data-lang="button-download"> Download
+                        <i class="fas fa-download"></i><span data-lang="button-download"> Download</span>
                     </a>
-
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
                     <h3><i class="fas fa-mail-bulk"></i> MailReader Telegram Bot</h3>
                     <p data-lang="project2-description">
                         A Telegram bot that lets you read your emails directly in Telegram. View email contents without switching apps.
@@ -120,9 +159,10 @@
                         <span><i class="fab fa-telegram"></i> Telegram Bot</span>
                     </div>
                     <a href="https://github.com/Farmerok/Telegram-MailReader/archive/refs/heads/main.zip" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i><span data-lang="button-download"> Download
+                        <i class="fas fa-download"></i><span data-lang="button-download"> Download</span>
                     </a>
-    
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
                     <h3><i class="fas fa-mouse-pointer"></i> Clicker</h3>
                     <p data-lang="project3-description">
                         Simple and easy to set up and use Auto Clicker. Choose the application, set the time until it clicks, and START!
@@ -131,7 +171,7 @@
                         <span><i class="fas fa-mouse"></i> Mouse</span>
                     </div>
                     <a href="https://github.com/Farmerok/Auto-Clicker/archive/refs/heads/main.zip" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i><span data-lang="button-download"> Download
+                        <i class="fas fa-download"></i><span data-lang="button-download"> Download</span>
                     </a>
                 </div>
             </div>
@@ -139,10 +179,10 @@
     </section>
     <footer>
         <div class="container">
-            <p>&copy; 2025 InsiderKeeps Dev.</p>
+            <p>© 2025 InsiderKeeps Dev.</p>
         </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="src/scripts/translations.js"></script>
     <script src="src/scripts/main.js"></script>
