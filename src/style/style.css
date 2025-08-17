@@ -335,7 +335,7 @@ p.description {
     border: 1px solid var(--glass-border);
     border-radius: 15px;
     padding: 2rem;
-    transition: var(--transition);
+    transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
