@@ -122,6 +122,8 @@ mobileMenu.addEventListener('click', (event) => {
         closeMobileMenu();
     }
 });
+//
+document.getElementById("year").textContent = new Date().getFullYear();
 
 //
 document.addEventListener('mousemove', e => {
