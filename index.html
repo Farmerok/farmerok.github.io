@@ -27,7 +27,7 @@
                 <div class="nav-links">
                     <a href="#hero" data-lang="nav-home" class="active"><i class="fas fa-home"></i> Home</a>
                     <a href="#about" data-lang="nav-about"><i class="fas fa-info-circle"></i> About</a>
-                    <a href="#projects" data-lang="nav-projects"><i class="fas fa-cogs"></i> Products</a>
+                    <a href="#projects" data-lang="projects-title"><i class="fas fa-cogs"></i> My Software</a>
                 </div>
                 <div class="nav-contacts">
                     <a href="https://t.me/insiderkeeps" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
@@ -63,7 +63,7 @@
         <div class="nav-links-mobile">
             <a href="#hero" data-lang="nav-home"><i class="fas fa-home"></i> Home</a>
             <a href="#about" data-lang="nav-about"><i class="fas fa-info-circle"></i> About</a>
-            <a href="#projects" data-lang="nav-projects"><i class="fas fa-cogs"></i> Products</a>
+            <a href="#projects" data-lang="projects-title"><i class="fas fa-cogs"></i> My Software</a>
         </div>
         <div class="nav-contacts-mobile">
             <a href="https://t.me/insiderkeeps" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
@@ -126,26 +126,17 @@
     </section>
     <section id="projects" class="section">
         <div class="container" data-aos="fade-up">
-            <h2 class="section-title" data-lang="projects-title">My Products</h2>
+            <h2 class="section-title" data-lang="projects-title"> My Software</h2>
             <div class="projects-grid">
                 <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                     <h3><i class="fas fa-bolt"></i> PCGuardControl</h3>
                     <p data-lang="project1-description">Advanced task management application with smart scheduling and priority system</p>
                     <div class="project-tags">
                         <span><i class="fab fa-telegram"></i> Telegram-Bot</span>
+                        <span><i class="fas fa-network-wired"></i> Network</span>
                         <span><i class="fas fa-desktop"></i> Windows 7-11</span>
                     </div>
                     <a href="https://github.com/Farmerok/Telegram-Remote-Control-PC/releases/latest" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i><span data-lang="button-download"> Download</span>
-                    </a>
-                </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <h3><i class="fas fa-trash-alt"></i> BinDrop</h3>
-                    <p data-lang="project4-description">This is an easy and convenient application that lives in a systemic tray and helps to keep your Windows basket under control!</p>
-                    <div class="project-tags">
-                        <span><i class="fas fa-desktop"></i> Windows 7-11</span>
-                    </div>
-                    <a href="https://github.com/Farmerok/BinDrop/releases/latest" class="download-btn" target="_blank">
                         <i class="fas fa-download"></i><span data-lang="button-download"> Download</span>
                     </a>
                 </div>
@@ -156,21 +147,34 @@
                     </p>
                     <div class="project-tags">
                         <span><i class="fas fa-envelope"></i> Email</span>
+                        <span><i class="fas fa-network-wired"></i> Network</span>
                         <span><i class="fab fa-telegram"></i> Telegram Bot</span>
                     </div>
                     <a href="https://github.com/Farmerok/Telegram-MailReader/archive/refs/heads/main.zip" class="download-btn" target="_blank">
                         <i class="fas fa-download"></i><span data-lang="button-download"> Download</span>
                     </a>
                 </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                    <h3><i class="fas fa-mouse-pointer"></i> Clicker</h3>
-                    <p data-lang="project3-description">
-                        Simple and easy to set up and use Auto Clicker. Choose the application, set the time until it clicks, and START!
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fas fa-trash-alt"></i> BinDrop</h3>
+                    <p data-lang="project3-description">This is an easy and convenient application that lives in a systemic tray and helps to keep your Windows basket under control!</p>
+                    <div class="project-tags">
+                        <span><i class="fas fa-desktop"></i> Windows 7-11</span>
+                    </div>
+                    <a href="https://github.com/Farmerok/BinDrop/releases/latest" class="download-btn" target="_blank">
+                        <i class="fas fa-download"></i><span data-lang="button-download"> Download</span>
+                    </a>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3><i class="fas fa-robot"></i> Voice Assistant</h3>
+                    <p data-lang="project4-description">
+                        IN THE WORKS...
                     </p>
                     <div class="project-tags">
-                        <span><i class="fas fa-mouse"></i> Mouse</span>
+                        <span><i class="fas fa-desktop"></i> Windows ?-11</span>
+                        <span><i class="fas fa-microphone"></i> Microphone</span>
+                        <span><i class="fas fa-network-wired"></i> Network</span>
                     </div>
-                    <a href="https://github.com/Farmerok/Auto-Clicker/archive/refs/heads/main.zip" class="download-btn" target="_blank">
+                    <a href="LINK..." class="download-btn" target="_blank">
                         <i class="fas fa-download"></i><span data-lang="button-download"> Download</span>
                     </a>
                 </div>
@@ -179,7 +183,7 @@
     </section>
     <footer>
         <div class="container">
-            <p>© 2025 InsiderKeeps Dev.</p>
+            <p>© <span id="year"></span> InsiderKeeps Dev.</p>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
