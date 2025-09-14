@@ -25,9 +25,10 @@
             <div class="logo">InsiderKeeps Dev</div>
             <div class="desktop-nav">
                 <div class="nav-links">
-                    <a href="#hero" data-lang="nav-home" class="active"><i class="fas fa-home"></i> Home</a>
-                    <a href="#about" data-lang="nav-about"><i class="fas fa-info-circle"></i> About</a>
-                    <a href="#projects" data-lang="projects-title"><i class="fas fa-cogs"></i> My Software</a>
+                    <a href="#hero" data-lang="nav.home" class="active"><i class="fas fa-home"></i> <span data-lang-text="nav.home">Home</span></a>
+                    <a href="#about" data-lang="nav.about"><i class="fas fa-info-circle"></i> <span data-lang-text="nav.about">About</span></a>
+                    <a href="#projects" data-lang="nav.software"><i class="fas fa-cogs"></i> <span data-lang-text="nav.software">My Software</span></a>
+                    <a href="#module" data-lang="nav.modules"><i class="fas fa-cogs"></i> <span data-lang-text="nav.modules">My Modules</span></a>
                 </div>
                 <div class="nav-contacts">
                     <a href="https://t.me/insiderkeeps" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
@@ -61,9 +62,10 @@
     </nav>
     <div class="mobile-menu" id="mobile-menu">
         <div class="nav-links-mobile">
-            <a href="#hero" data-lang="nav-home"><i class="fas fa-home"></i> Home</a>
-            <a href="#about" data-lang="nav-about"><i class="fas fa-info-circle"></i> About</a>
-            <a href="#projects" data-lang="projects-title"><i class="fas fa-cogs"></i> My Software</a>
+            <a href="#hero" data-lang="nav.home"><i class="fas fa-home"></i> <span data-lang-text="nav.home">Home</span></a>
+            <a href="#about" data-lang="nav.about"><i class="fas fa-info-circle"></i> <span data-lang-text="nav.about">About</span></a>
+            <a href="#projects" data-lang="nav.software"><i class="fas fa-cogs"></i> <span data-lang-text="nav.software">My Software</span></a>
+            <a href="#module" data-lang="nav.modules"><i class="fas fa-cogs"></i> <span data-lang-text="nav.modules">My Modules</span></a>
         </div>
         <div class="nav-contacts-mobile">
             <a href="https://t.me/insiderkeeps" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
@@ -90,34 +92,34 @@
     </div>
     <section id="hero" class="section">
         <div class="container" data-aos="fade-up">
-            <h1 class="title" data-lang="hero-title">Welcome to InsiderKeeps</h1>
-            <p class="description" data-lang="hero-description">
-                Discover healthy software tools and applications that will make your life easier
+            <h1 class="title" data-lang="hero.title">Welcome to IK Client</h1>
+            <p class="description" data-lang="hero.description">
+                Explore powerful and intuitive tools designed to simplify your digital world.
             </p>
             <div class="scroll-indicator">
                 <div class="mouse"></div>
-                <p data-lang="scroll-text"><i class="fas fa-arrow-down"></i> Scroll down</p>
+                <p data-lang="hero.scroll"><i class="fas fa-arrow-down"></i> Scroll down</p>
             </div>
         </div>
     </section>
     <section id="about" class="section">
         <div class="container" data-aos="fade-up">
-            <h2 class="section-title" data-lang="about-title">About Me</h2>
+            <h2 class="section-title" data-lang="about.title">About Me</h2>
             <div class="about-content">
                 <div class="about-text" data-aos="fade-up">
-                    <p data-lang="about-description">I create and share useful software tools and applications. My goal is to provide solutions that enhance productivity and improve user experience.</p>
+                    <p data-lang="about.description">I craft intuitive software solutions to simplify complex tasks. My mission is to automate routine processes and make technology accessible, freeing you to focus on what truly matters.</p>
                     <div class="skills">
                         <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
                             <i class="fas fa-shield-alt"></i>
-                            <span data-lang="skill-security">Security</span>
+                            <span data-lang="about.skill.security">Security</span>
                         </div>
                         <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
                             <i class="fas fa-tachometer-alt"></i>
-                            <span data-lang="skill-performance">Performance</span>
+                            <span data-lang="about.skill.performance">Performance</span>
                         </div>
                         <div class="skill-item" data-aos="fade-up" data-aos-delay="300">
                             <i class="fas fa-user-shield"></i>
-                            <span data-lang="skill-privacy">Privacy</span>
+                            <span data-lang="about.skill.privacy">Privacy</span>
                         </div>
                     </div>
                 </div>
@@ -126,47 +128,33 @@
     </section>
     <section id="projects" class="section">
         <div class="container" data-aos="fade-up">
-            <h2 class="section-title" data-lang="projects-title"> My Software</h2>
+            <h2 class="section-title" data-lang="software.title"> My Software</h2>
             <div class="projects-grid">
                 <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                     <h3><i class="fas fa-bolt"></i> PCGuardControl</h3>
-                    <p data-lang="project1-description">Advanced task management application with smart scheduling and priority system</p>
+                    <p data-lang="software.pcguard.description">Your personal assistant for remote PC control from your phone. Manage audio, display, files, screen streaming, and more.</p>
                     <div class="project-tags">
                         <span><i class="fab fa-telegram"></i> Telegram-Bot</span>
                         <span><i class="fas fa-network-wired"></i> Network</span>
                         <span><i class="fas fa-desktop"></i> Windows 7-11</span>
                     </div>
                     <a href="https://github.com/Farmerok/Telegram-Remote-Control-PC/releases/latest" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i><span data-lang="button-download"> Download</span>
-                    </a>
-                </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                    <h3><i class="fas fa-mail-bulk"></i> MailReader Telegram Bot</h3>
-                    <p data-lang="project2-description">
-                        A Telegram bot that lets you read your emails directly in Telegram. View email contents without switching apps.
-                    </p>
-                    <div class="project-tags">
-                        <span><i class="fas fa-envelope"></i> Email</span>
-                        <span><i class="fas fa-network-wired"></i> Network</span>
-                        <span><i class="fab fa-telegram"></i> Telegram Bot</span>
-                    </div>
-                    <a href="https://github.com/Farmerok/Telegram-MailReader/archive/refs/heads/main.zip" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i><span data-lang="button-download"> Download</span>
+                        <i class="fas fa-download"></i><span data-lang="common.download"> Download</span>
                     </a>
                 </div>
                 <div class="project-card" data-aos="fade-up" data-aos-delay="200">
                     <h3><i class="fas fa-trash-alt"></i> BinDrop</h3>
-                    <p data-lang="project3-description">This is an easy and convenient application that lives in a systemic tray and helps to keep your Windows basket under control!</p>
+                    <p data-lang="software.bindrop.description">A minimalist tray utility for managing your Windows Recycle Bin. Clean up with ease and keep your desktop organized.</p>
                     <div class="project-tags">
                         <span><i class="fas fa-desktop"></i> Windows 7-11</span>
                     </div>
                     <a href="https://github.com/Farmerok/BinDrop/releases/latest" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i><span data-lang="button-download"> Download</span>
+                        <i class="fas fa-download"></i><span data-lang="common.download"> Download</span>
                     </a>
                 </div>
                 <div class="project-card" data-aos="fade-up" data-aos-delay="300">
                     <h3><i class="fas fa-robot"></i> Voice Assistant</h3>
-                    <p data-lang="project4-description">
+                    <p data-lang="software.assistant.description">
                         IN THE WORKS...
                     </p>
                     <div class="project-tags">
@@ -174,8 +162,29 @@
                         <span><i class="fas fa-microphone"></i> Microphone</span>
                         <span><i class="fas fa-network-wired"></i> Network</span>
                     </div>
-                    <a href="LINK..." class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i><span data-lang="button-download"> Download</span>
+                    <a href="#" class="download-btn" target="_blank">
+                        <i class="fas fa-download"></i><span data-lang="common.download"> Download</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="module" class="section">
+        <div class="container" data-aos="fade-up">
+            <h2 class="section-title" data-lang="modules.title">My Modules</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fas fa-bolt"></i> <span data-lang="modules.autoupdater.title">Auto-Updater</span></h3>
+                    <p data-lang="modules.autoupdater.description">An auto-updater for EXE files from GitHub Releases, complete with installation and execution.</p>
+                    <a href="https://github.com/Farmerok/Telegram-Remote-Control-PC/releases/latest" class="download-btn" target="_blank">
+                        <i class="fas fa-download"></i><span data-lang="common.download"> Download</span>
+                    </a>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3><i class="fas fa-cogs"></i> <span data-lang="modules.easyadmin.title">EasyAdmin</span></h3>
+                    <p data-lang="modules.easyadmin.description">A module for Windows system control. It allows you to lock the screen, manage sound, power, processes, brightness, and the CD-ROM drive. Simple to use for PC administration and easy to integrate into your projects.</p>
+                    <a href="#" class="download-btn" target="_blank">
+                        <i class="fas fa-download"></i><span data-lang="common.download"> Download</span>
                     </a>
                 </div>
             </div>
@@ -188,7 +197,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="src/scripts/translations.js"></script>
     <script src="src/scripts/main.js"></script>
+    <script src="src/scripts/translations.js"></script>
 </body>
 </html>
