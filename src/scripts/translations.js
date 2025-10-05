@@ -2,8 +2,8 @@ const translations = {
     en: {
         "nav.home": "Home",
         "nav.about": "About",
-        "nav.software": "My Software",
-        "nav.modules": "My Modules",
+        "nav.software": "Software",
+        "nav.modules": "Modules",
         "hero.title": "Welcome to IK Client",
         "hero.description": "Explore powerful and intuitive tools designed to simplify your digital world.",
         "hero.scroll": "Scroll down",
@@ -12,16 +12,17 @@ const translations = {
         "about.skill.security": "Security",
         "about.skill.performance": "Performance",
         "about.skill.privacy": "Privacy",
-        "software.title": "My Software",
-        "modules.title": "My Modules",
         "modules.autoupdater.title": "Auto-Updater",
         "modules.autoupdater.description": "An auto-updater for EXE files from GitHub Releases, complete with installation and execution.",
         "modules.easyadmin.title": "EasyAdmin",
         "modules.easyadmin.description": "A module for Windows system control. It allows you to lock the screen, manage sound, power, processes, brightness, and the CD-ROM drive. Simple to use for PC administration and easy to integrate into your projects.",
         "common.download": "Download",
+        
         "software.pcguard.description": "Your personal assistant for remote PC control from your phone. Manage audio, display, files, screen streaming, and more.",
+        
         "software.bindrop.description": "A minimalist tray utility for managing your Windows Recycle Bin. Clean up with ease and keep your desktop organized.",
-        "software.assistant.description": "IN THE WORKS..."
+        
+        "software.assistant.description": "A voice assistant for Windows that allows you to control your computer using commands, scripts, and personalized audio responses. Flexible settings, visual themes, and system integration make it a simple and convenient tool for automation."
     },
     uk: {
         "nav.home": "Головна",
@@ -36,16 +37,17 @@ const translations = {
         "about.skill.security": "Безпека",
         "about.skill.performance": "Продуктивність",
         "about.skill.privacy": "Конфіденційність",
-        "software.title": "Мої Програми",
-        "modules.title": "Мої Модулі",
         "modules.autoupdater.title": "Авто-оновлювач",
         "modules.autoupdater.description": "Автооновлювач для EXE-файлів з GitHub Releases, з установкою та запуском.",
         "modules.easyadmin.title": "EasyAdmin",
         "modules.easyadmin.description": "Модуль для керування системою Windows. Дозволяє блокувати екран, керувати звуком, живленням, процесами, яскравістю та CD-ROM. Легко інтегрується у ваші проєкти.",
         "common.download": "Завантажити",
+        
         "software.pcguard.description": "Ваш особистий помічник для дистанційного керування ПК з телефону. Керуйте звуком, екраном, файлами, трансляцією екрана та іншим.",
+        
         "software.bindrop.description": "Мінімалістична утиліта для керування кошиком Windows прямо із системного трея. Очищуйте легко та підтримуйте порядок.",
-        "software.assistant.description": "У РОЗРОБЦІ..."
+
+        "software.assistant.description": "Голосовий асистент для Windows, який дозволяє керувати комп’ютером за допомогою команд, сценаріїв та персональних звукових відповідей. Гнучкі налаштування, візуальні теми та інтеграція з системою роблять його простим і зручним інструментом для автоматизації."
     },
     ru: {
         "nav.home": "Главная",
@@ -60,15 +62,16 @@ const translations = {
         "about.skill.security": "Безопасность",
         "about.skill.performance": "Производительность",
         "about.skill.privacy": "Конфиденциальность",
-        "software.title": "Мои Программы",
-        "modules.title": "Мои Модули",
         "modules.autoupdater.title": "Авто-обновление",
         "modules.autoupdater.description": "Автообновление для EXE-файлов из GitHub Releases, с установкой и запуском.",
         "modules.easyadmin.title": "EasyAdmin",
         "modules.easyadmin.description": "Модуль для управления системой Windows. Позволяет блокировать экран, управлять звуком, питанием, процессами, яркостью и CD-ROM. Легко интегрируется в ваши проекты.",
         "common.download": "Скачать",
+        
         "software.pcguard.description": "Ваш личный помощник для удалённого управления ПК с телефона. Управляйте звуком, экраном, файлами, трансляцией экрана и многим другим.",
+        
         "software.bindrop.description": "Минималистичная утилита для управления корзиной Windows прямо из системного трея. Очищайте легко и поддерживайте порядок.",
-        "software.assistant.description": "В РАЗРАБОТКЕ..."
+        
+        "software.assistant.description": "Голосовой ассистент для Windows, позволяющий управлять компьютером с помощью команд, сценариев и персональных звуковых ответов. Гибкие настройки, визуальные темы и интеграция с системой делают его простым и удобным инструментом для автоматизации."
     }
 };
