@@ -54,7 +54,7 @@ const translations = {
         "nav.about": "Обо мне",
         "nav.software": "Программы",
         "nav.modules": "Модули",
-        "hero.title": "Добро пожаловать в IK Client",
+        "hero.title": "Добро пожаловать к IK Client",
         "hero.description": "Откройте для себя мощные инструменты, которые сделают вашу цифровую жизнь проще.",
         "hero.scroll": "Прокрутите вниз",
         "about.title": "Обо мне",
