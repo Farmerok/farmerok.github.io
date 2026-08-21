@@ -9,26 +9,40 @@
     <meta property="og:description" content="Discover useful software tools and applications created by InsiderKeeps. Enhance productivity and security with my software.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="src/image/ico.png" sizes="64x64">
-    <title>IK - Software Products</title>
+    <title>IK // Software Control Deck</title>
     <link rel="stylesheet" href="src/style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
     <div id="preloader">
-        <div class="loader"></div>
+        <div class="boot-window">
+            <div class="boot-titlebar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="boot-titletext">SYSTEM://BOOT</span></div>
+            <div class="boot-log" id="boot-log"></div>
+            <div class="boot-bar"><div class="boot-bar-fill" id="boot-bar-fill"></div></div>
+        </div>
     </div>
+
+    <canvas id="grid-canvas"></canvas>
+    <div class="hud-grid-static"></div>
     <div id="animated-bg"></div>
-    <div id="particles-js"></div>
+
     <nav>
         <div class="nav-content">
-            <div class="logo">InsiderKeeps Dev</div>
+            <a href="#hero" class="logo"><span class="logo-bracket">[</span>IK<span class="logo-slash">://</span>DEV<span class="logo-cursor">_</span></span>
+
             <div class="desktop-nav">
                 <div class="nav-links">
-                    <a href="#hero" data-lang="nav.home" class="active"><i class="fas fa-home"></i> <span data-lang-text="nav.home">Home</span></a>
-                    <a href="#about" data-lang="nav.about"><i class="fas fa-info-circle"></i> <span data-lang-text="nav.about">About</span></a>
-                    <a href="#projects" data-lang="nav.software"><i class="fas fa-cogs"></i> <span data-lang-text="nav.software">My Software</span></a>
-                    <a href="#module" data-lang="nav.modules"><i class="fas fa-cogs"></i> <span data-lang-text="nav.modules">My Modules</span></a>
+                    <a href="#hero" class="active"><span class="nav-idx">01</span><span data-lang-text="nav.home">Home</span></a>
+                    <a href="#about"><span class="nav-idx">02</span><span data-lang-text="nav.about">About</span></a>
+                    <a href="#projects"><span class="nav-idx">03</span><span data-lang-text="nav.software">My Software</span></a>
+                    <a href="#module"><span class="nav-idx">04</span><span data-lang-text="nav.modules">My Modules</span></a>
+                </div>
+                <div class="nav-status">
+                    <span class="status-dot"></span>
+                    <span id="nav-clock">00:00:00</span>
                 </div>
                 <div class="nav-contacts">
                     <a href="https://t.me/insiderkeeps" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
@@ -36,8 +50,9 @@
                 </div>
                 <div class="language-dropdown">
                     <button class="lang-btn" onclick="toggleLanguageMenu(this)">
-                        <img id="current-flag" src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="Current language flag" width="20">
-                        <span id="current-lang">English</span>
+                        <img id="current-flag" src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="Current language flag" width="18">
+                        <span id="current-lang">EN</span>
+                        <i class="fas fa-chevron-down lang-caret"></i>
                     </button>
                     <div class="language-menu">
                         <div class="language-option" onclick="changeLanguage('en')">
@@ -52,6 +67,7 @@
                     </div>
                 </div>
             </div>
+
             <button class="hamburger" id="hamburger-button" aria-label="Toggle menu">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
@@ -59,12 +75,13 @@
             </button>
         </div>
     </nav>
+
     <div class="mobile-menu" id="mobile-menu">
         <div class="nav-links-mobile">
-            <a href="#hero" data-lang="nav.home"><i class="fas fa-home"></i> <span data-lang-text="nav.home">Home</span></a>
-            <a href="#about" data-lang="nav.about"><i class="fas fa-info-circle"></i> <span data-lang-text="nav.about">About</span></a>
-            <a href="#projects" data-lang="nav.software"><i class="fas fa-cogs"></i> <span data-lang-text="nav.software">My Software</span></a>
-            <a href="#module" data-lang="nav.modules"><i class="fas fa-cogs"></i> <span data-lang-text="nav.modules">My Modules</span></a>
+            <a href="#hero"><span class="nav-idx">01</span> <span data-lang-text="nav.home">Home</span></a>
+            <a href="#about"><span class="nav-idx">02</span> <span data-lang-text="nav.about">About</span></a>
+            <a href="#projects"><span class="nav-idx">03</span> <span data-lang-text="nav.software">My Software</span></a>
+            <a href="#module"><span class="nav-idx">04</span> <span data-lang-text="nav.modules">My Modules</span></a>
         </div>
         <div class="nav-contacts-mobile">
             <a href="https://t.me/insiderkeeps" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
@@ -74,6 +91,7 @@
             <button class="lang-btn" onclick="toggleLanguageMenu(this)">
                 <img id="current-flag-mobile" src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="Current language flag" width="20">
                 <span id="current-lang-mobile">English</span>
+                <i class="fas fa-chevron-down lang-caret"></i>
             </button>
             <div class="language-menu">
                 <div class="language-option" onclick="changeLanguage('en')">
@@ -88,70 +106,108 @@
             </div>
         </div>
     </div>
-    <section id="hero" class="section">
-        <div class="container" data-aos="fade-up">
-            <h1 class="title" data-lang="hero.title">Welcome to IK Client</h1>
-            <p class="description" data-lang="hero.description">
-                Explore powerful and intuitive tools designed to simplify your digital world.
-            </p>
+
+    <section id="hero" class="section hero-section">
+        <div class="container">
+            <div class="hero-frame">
+                <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+                <div class="terminal-line" id="terminal-line">&nbsp;</div>
+                <h1 class="title" data-lang="hero.title">Welcome to IK Client</h1>
+                <p class="description" data-lang="hero.description">
+                    Explore powerful and intuitive tools designed to simplify your digital world.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="hud-btn primary"><i class="fas fa-terminal"></i> <span data-lang-text="hero.cta.projects">View software</span></a>
+                    <a href="#about" class="hud-btn ghost"><i class="fas fa-user-shield"></i> <span data-lang-text="hero.cta.about">Who builds this</span></a>
+                </div>
+                <div class="hero-stats" id="hero-stats">
+                </div>
+            </div>
             <div class="scroll-indicator">
                 <div class="mouse"></div>
                 <p data-lang="hero.scroll"><i class="fas fa-arrow-down"></i> Scroll down</p>
             </div>
         </div>
     </section>
+
     <section id="about" class="section">
-        <div class="container" data-aos="fade-up">
-            <h2 class="section-title" data-lang="about.title">About Me</h2>
+        <div class="container">
+            <h2 class="section-title"><span class="section-index">02</span> <span data-lang="about.title">About Me</span></h2>
             <div class="about-content">
-                <div class="about-text" data-aos="fade-up">
-                    <p data-lang="about.description">I craft intuitive software solutions to simplify complex tasks. My mission is to automate routine processes and make technology accessible, freeing you to focus on what truly matters.</p>
+                <div class="about-text reveal">
+                    <div class="terminal-card">
+                        <div class="boot-titlebar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="boot-titletext">whoami.sh</span></div>
+                        <p data-lang="about.description">I craft intuitive software solutions to simplify complex tasks. My mission is to automate routine processes and make technology accessible, freeing you to focus on what truly matters.</p>
+                    </div>
                     <div class="skills">
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="skill-item reveal" style="--delay:0ms">
                             <i class="fas fa-shield-alt"></i>
-                            <span data-lang="about.skill.security">Security</span>
+                            <span data-lang-text="about.skill.security">Security</span>
+                            <div class="skill-meter"><div class="skill-meter-fill" style="--val:92%"></div></div>
                         </div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="skill-item reveal" style="--delay:120ms">
                             <i class="fas fa-tachometer-alt"></i>
-                            <span data-lang="about.skill.performance">Performance</span>
+                            <span data-lang-text="about.skill.performance">Performance</span>
+                            <div class="skill-meter"><div class="skill-meter-fill" style="--val:88%"></div></div>
                         </div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="skill-item reveal" style="--delay:240ms">
                             <i class="fas fa-user-shield"></i>
-                            <span data-lang="about.skill.privacy">Privacy</span>
+                            <span data-lang-text="about.skill.privacy">Privacy</span>
+                            <div class="skill-meter"><div class="skill-meter-fill" style="--val:95%"></div></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <section id="projects" class="section">
-        <div class="container" data-aos="fade-up">
-            <h2 class="section-title" data-lang="nav.software"> Software</h2>
+        <div class="container">
+            <h2 class="section-title"><span class="section-index">03</span> <span data-lang="nav.software">Software</span></h2>
+            <p class="section-hint" data-lang-text="projects.hint">Tap a card to open its full control panel — specs, features and screenshots.</p>
             <div class="projects-grid">
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <h3><i class="fas fa-bolt"></i> PCGuardControl</h3>
+
+                <article class="project-card reveal" data-project="pcguard" data-accent="green" tabindex="0">
+                    <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+                    <div class="card-scan"></div>
+                    <div class="project-icon"><i class="fas fa-satellite-dish"></i></div>
+                    <h3>PCGuardControl</h3>
                     <p data-lang="software.pcguard.description">Your personal assistant for remote PC control from your phone. Manage audio, display, files, screen streaming, and more.</p>
                     <div class="project-tags">
                         <span><i class="fab fa-telegram"></i> Telegram-Bot</span>
                         <span><i class="fas fa-network-wired"></i> Network</span>
                         <span><i class="fas fa-desktop"></i> Windows 7-11</span>
                     </div>
-                    <a href="https://github.com/Farmerok/Telegram-Remote-Control-PC/releases/latest" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i><span data-lang="common.download"> Download</span>
-                    </a>
-                </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <h3><i class="fas fa-trash-alt"></i> BinDrop</h3>
+                    <div class="card-actions">
+                        <button class="hud-btn primary open-modal-btn" data-project="pcguard"><i class="fas fa-square-full"></i> <span data-lang-text="common.details">Open panel</span></button>
+                        <a href="https://github.com/Farmerok/Telegram-Remote-Control-PC/releases/latest" class="download-btn" target="_blank" onclick="event.stopPropagation()">
+                            <i class="fas fa-download"></i><span data-lang-text="common.download"> Download</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-project="bindrop" data-accent="amber" tabindex="0">
+                    <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+                    <div class="card-scan"></div>
+                    <div class="project-icon"><i class="fas fa-trash-alt"></i></div>
+                    <h3>BinDrop</h3>
                     <p data-lang="software.bindrop.description">A minimalist tray utility for managing your Windows Recycle Bin. Clean up with ease and keep your desktop organized.</p>
                     <div class="project-tags">
                         <span><i class="fas fa-desktop"></i> Windows 7-11</span>
                     </div>
-                    <a href="https://github.com/Farmerok/BinDrop/releases/latest" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i><span data-lang="common.download"> Download</span>
-                    </a>
-                </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                    <h3><i class="fas fa-robot"></i> Uvoxus</h3>
+                    <div class="card-actions">
+                        <button class="hud-btn primary open-modal-btn" data-project="bindrop"><i class="fas fa-square-full"></i> <span data-lang-text="common.details">Open panel</span></button>
+                        <a href="https://github.com/Farmerok/BinDrop/releases/latest" class="download-btn" target="_blank" onclick="event.stopPropagation()">
+                            <i class="fas fa-download"></i><span data-lang-text="common.download"> Download</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-project="uvoxus" data-accent="pink" tabindex="0">
+                    <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+                    <div class="card-scan"></div>
+                    <div class="project-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Uvoxus</h3>
                     <p data-lang="software.assistant.description">
                         A voice assistant for Windows that allows you to control your computer using commands, scripts, and personalized audio responses. Flexible settings, visual themes, and system integration make it a simple and convenient tool for automation.
                     </p>
@@ -160,42 +216,108 @@
                         <span><i class="fas fa-microphone"></i> Microphone</span>
                         <span><i class="fas fa-network-wired"></i> Network</span>
                     </div>
-                    <a href="https://github.com/Farmerok/Uvoxus-Voice-Assistant/releases/latest" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i><span data-lang="common.download"> Download</span>
-                    </a>
-                </div>
+                    <div class="card-actions">
+                        <button class="hud-btn primary open-modal-btn" data-project="uvoxus"><i class="fas fa-square-full"></i> <span data-lang-text="common.details">Open panel</span></button>
+                        <a href="https://github.com/Farmerok/Uvoxus-Voice-Assistant/releases/latest" class="download-btn" target="_blank" onclick="event.stopPropagation()">
+                            <i class="fas fa-download"></i><span data-lang-text="common.download"> Download</span>
+                        </a>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
+
     <section id="module" class="section">
-        <div class="container" data-aos="fade-up">
-            <h2 class="section-title" data-lang="nav.modules">Modules</h2>
+        <div class="container">
+            <h2 class="section-title"><span class="section-index">04</span> <span data-lang="nav.modules">Modules</span></h2>
+            <p class="section-hint" data-lang-text="modules.hint">Drop-in building blocks you can wire into your own projects.</p>
             <div class="projects-grid">
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <h3><i class="fas fa-bolt"></i> <span data-lang="modules.autoupdater.title">Auto-Updater</span></h3>
+
+                <article class="project-card reveal" data-project="autoupdater" data-accent="green" tabindex="0">
+                    <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+                    <div class="card-scan"></div>
+                    <div class="project-icon"><i class="fas fa-bolt"></i></div>
+                    <h3><span data-lang-text="modules.autoupdater.title">Auto-Updater</span></h3>
                     <p data-lang="modules.autoupdater.description">An auto-updater for EXE files from GitHub Releases, complete with installation and execution.</p>
-                    <a href="https://github.com/Farmerok/auto-updater" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i><span data-lang="common.download"> Download</span>
-                    </a>
-                </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                    <h3><i class="fas fa-cogs"></i> <span data-lang="modules.easyadmin.title">EasyAdmin</span></h3>
+                    <div class="project-tags">
+                        <span><i class="fab fa-github"></i> GitHub Releases</span>
+                        <span><i class="fas fa-puzzle-piece"></i> Module</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="hud-btn primary open-modal-btn" data-project="autoupdater"><i class="fas fa-square-full"></i> <span data-lang-text="common.details">Open panel</span></button>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-project="easyadmin" data-accent="amber" tabindex="0">
+                    <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+                    <div class="card-scan"></div>
+                    <div class="project-icon"><i class="fas fa-cogs"></i></div>
+                    <h3><span data-lang-text="modules.easyadmin.title">EasyAdmin</span></h3>
                     <p data-lang="modules.easyadmin.description">A module for Windows system control. It allows you to lock the screen, manage sound, power, processes, brightness, and the CD-ROM drive. Simple to use for PC administration and easy to integrate into your projects.</p>
-                    <a href="https://github.com/Farmerok/module-easyadmin" class="download-btn" target="_blank">
-                        <i class="fas fa-download"></i><span data-lang="common.download"> Download</span>
-                    </a>
-                </div>
+                    <div class="project-tags">
+                        <span><i class="fas fa-desktop"></i> Windows</span>
+                        <span><i class="fas fa-puzzle-piece"></i> Module</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="hud-btn primary open-modal-btn" data-project="easyadmin"><i class="fas fa-square-full"></i> <span data-lang-text="common.details">Open panel</span></button>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
+
     <footer>
-        <div class="container">
+        <div class="container footer-content">
+            <div class="footer-status"><span class="status-dot"></span><span data-lang-text="footer.status">All systems operational</span></div>
             <p>© <span id="year"></span> InsiderKeeps Dev.</p>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="src/scripts/main.js"></script>
+
+    <!-- Project modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-window" id="modal-window" data-accent="green">
+            <div class="boot-titlebar modal-titlebar">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                <span class="boot-titletext" id="modal-titletext">project.sys</span>
+                <button class="modal-close" id="modal-close" aria-label="Close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-head">
+                    <div class="modal-icon" id="modal-icon"><i class="fas fa-cube"></i></div>
+                    <div>
+                        <h3 id="modal-title">Project</h3>
+                        <p class="modal-tag" id="modal-tag">Tagline</p>
+                    </div>
+                </div>
+
+                <div class="modal-gallery" id="modal-gallery"></div>
+
+                <p class="modal-desc" id="modal-desc"></p>
+
+                <div class="modal-grid">
+                    <div class="modal-col">
+                        <h4><i class="fas fa-list-check"></i> <span data-lang-text="modal.features">Key features</span></h4>
+                        <ul class="modal-features" id="modal-features"></ul>
+                    </div>
+                    <div class="modal-col">
+                        <h4><i class="fas fa-microchip"></i> <span data-lang-text="modal.specs">Specs</span></h4>
+                        <ul class="modal-specs" id="modal-specs"></ul>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <a href="#" id="modal-download" class="hud-btn primary" target="_blank"><i class="fas fa-download"></i> <span data-lang-text="common.download">Download</span></a>
+                    <a href="#" id="modal-github" class="hud-btn ghost" target="_blank"><i class="fab fa-github"></i> <span data-lang-text="modal.source">Source</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
     <script src="src/scripts/translations.js"></script>
+    <script src="src/scripts/main.js"></script>
 </body>
 </html>
